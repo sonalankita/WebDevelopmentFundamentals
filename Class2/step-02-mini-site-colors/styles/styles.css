@@ -1,0 +1,9 @@
+header{
+	height: 500px;
+	 background: linear-gradient( to bottom,rgba(255,255,255,0.4 ), rgba(255,255,255,0.4) ),url(images/header.jpg) no-repeat top fixed;
+	  background-size: cover;
+}
+
+.about div hover{
+	background: #eee;
+}

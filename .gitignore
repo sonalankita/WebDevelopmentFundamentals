@@ -1,0 +1,13 @@
+*
+__MACOSX
+/__MACOSX
+Class1/__MACOSX/*
+Class2/__MACOSX/*
+Class3/__MACOSX/*
+
+!.gitignore
+!*/
+!*.html
+!*.css
+!*.png
+!*.jpeg
