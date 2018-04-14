@@ -1,0 +1,24 @@
+*{
+	box-sizing: border-box;
+}
+.clearfix::after{
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+}
+main{
+	width: 80%;
+	max-width: 1080px;
+	margin: 0 auto;
+	background: lightgrey;
+}
+main img{
+	width: calc((100% - (10px * (10 - 1))) / 10);
+	margin-right:10px;
+	margin-bottom:10px;
+	float:left;
+	}
+main img:nth-of-type(10n+10){
+	margin-right: 0;
+}

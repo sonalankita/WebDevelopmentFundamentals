@@ -1,0 +1,43 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0px;
+}
+.clearfix::after{
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+}
+h1{
+	color: red;
+}
+
+header{
+	background-image: url(assets/breather-196130.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 900px;
+	
+	/*linear-gradient(to bottom, rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(assets/breather-196130.jpg);*/
+}
+header nav{
+	display: inline;
+	float: right;
+	text-decoration: none;
+	background: pink;
+	}
+
+.wrapper{
+	float: right;
+}
+h3{
+	text-underline-position: under;
+}
+a{
+	text-decoration:none;
+}
+
+main {
+}

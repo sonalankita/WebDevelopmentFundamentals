@@ -1,12 +1,17 @@
 header{
-	height: 500px;
-	background: linear-gradient( to bottom,rgba(255,255,255,0.4 ), rgba(255,255,255,0.4) ),url(images/header.jpg) no-repeat top fixed;
+	height: 80vh;
+	background: linear-gradient( to bottom,rgba(255,255,255,0.4 ), rgba(255,255,255,0.4) ),url(images/header.jpg);
 	  background-size: cover;
 	}
+	h1{
+		border-width: 2px;
+		border-color: white;
+		border-style: solid;
+	}
 
-.about div:hover{
-	background: #eee;
+.about {
+	background: lightgrey;
 }
 footer{
-	background: grey;
+	background: lightgrey;
 }

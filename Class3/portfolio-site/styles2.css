@@ -1,0 +1,13 @@
+p{
+	font-size: 20px;
+
+}
+p.new{
+	background-color: blue;
+}
+p.warning{
+	background-color: red;
+}
+p.special,p.warning{
+	color: red;
+}

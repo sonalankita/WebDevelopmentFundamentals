@@ -1,0 +1,95 @@
+/*HEADER STYLES*/
+*{
+	box-sizing: border-box;
+		font-family: Arial;
+}
+body{
+	margin: 0px;
+}
+.clearfix::after{
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+}
+header {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(../images/header.jpg);
+	background-size: cover;
+	background-position: 0 -200px;
+	min-height: 650px;
+	text-align: center;
+}
+
+header h1 {
+	border: 2px solid #ffffff;
+	color: white;
+	text-transform: uppercase;
+	font-family: Arial;
+	font-size: 40px;
+	position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    padding: 10px 20px;
+}
+.header-top{
+	padding-top: 40px;
+}
+div figure {
+	width: calc((100% - (20px * (3 - 1)) - 20px) / 3);
+	height:auto;
+	margin-right:10px;
+	margin-bottom:10px;
+	margin-left: 10px; 
+	float:left;
+	text-align: center;
+}
+
+div figure img {
+	width: 100%;
+	height: auto;
+}
+
+div figure:nth-of-type(3n+3){
+	margin-right: 10px;
+}
+.logo {
+	width: 80px;
+	float: left;
+	top: 10%;
+
+}
+nav {
+	/*width: 30%;*/
+	display: inline;
+	float: right;
+}
+ul li{
+	margin-right: 10px;
+	display: inline;
+	color: white;
+}
+a {
+    color: white;
+} 
+main {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+/*ABOUT SECTION*/
+.about,
+footer {
+	background: #f1f0ef;
+}
+
+main section {
+	padding-top: 100px;
+    padding-bottom: 100px;
+    overflow: hidden;
+}
+
+
+/*FOOTER STYLES*/
+footer {
+	padding: 10px 0;
+}
