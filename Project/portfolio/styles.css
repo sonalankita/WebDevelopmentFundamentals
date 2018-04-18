@@ -11,33 +11,124 @@ body{
 	clear: both;
 }
 h1{
-	color: red;
+	font-family: 'montserrat';
+	font-size: 48px;
+	color: white;
+	width: 500px;
+	padding-left: 100px; 
+	padding-top: 200px;
+	margin: 0px;
 }
+h2{
+	color: red;
+	font-family: 'montserrat';
+	font-size: 38px;
+	font-weight: bold;
+	text-transform: lowercase;
+	position: absolute;
+	left: 100px;
+	top: 62px;
+}
+h3{
+	color: #1a1a1b;
+	font-family: 'montserrat';
+	font-size: 33px;
+	font-weight: bold;
+}
+h4{
+	color: #a09f9f;
+	font-family: 'montserrat';
+	font-size: 19px;
+	text-transform: uppercase;
+	border-bottom: solid 1px #a09f9f;
+	/*border-bottom-style: solid;*/
 
+}
+p{
+	color: #a09f9f;
+	font-family: 'montserrat';
+	font-size: 16px;
+}
+.link a{
+	color: #ed1e24;
+	font-family: 'montserrat';
+	font-size: 17px;
+	text-transform: uppercase;
+}
 header{
 	background-image: url(assets/breather-196130.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 900px;
 	
-	/*linear-gradient(to bottom, rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(assets/breather-196130.jpg);*/
 }
-header nav{
+/*.link1{
+	color: white;
 	display: inline;
 	float: right;
 	text-decoration: none;
-	background: pink;
-	}
+	padding: 2px;
+	/*background: pink;*/
+	/*}*/
 
+.link1 {
+	text-decoration: none;
+	margin: 0px;
+	padding: 0px;
+	/*color: white;*/
+	/*background-color: red;*/
+}
+
+header nav {
+	padding: 0px;
+	margin: 0px;
+	position: absolute;
+	right: 100px;
+	top: 100px;
+}
+
+nav {
+}
+
+.link11 {
+    display:inline;
+    text-transform: uppercase;
+    padding-left: 20px;
+    font-family: 'arial';
+}
+
+.link11 a {
+	color: #c2c2c2;
+	text-decoration: none;
+}
+
+.link3{
+	float: right;
+	position: center;
+}
+.heading{
+	color: #f2f2f2;
+	text-decoration: none;
+}
+.link2, .link3 a{
+	color: black;
+	text-decoration: none;
+}
+	
 .wrapper{
 	float: right;
 }
-h3{
-	text-underline-position: under;
-}
-a{
-	text-decoration:none;
+
+p{
+	float: right;
 }
 
-main {
+footer{
+	color: #a09f9f;
+	font-family: 'montserrat';
+	font-size: 12px;
+	text-transform: uppercase;
+	float: auto;
+	display:inline;
+	background-color: #939393;
 }
