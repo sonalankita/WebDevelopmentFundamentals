@@ -87,12 +87,6 @@ header nav {
 	padding-right: 10px;
 	padding-left: 20px;
 }
-.link12 a{
-	color: #ed1e24;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 17px;
-	text-transform: uppercase;
-}
 
 /*SECTION2*/
 
@@ -120,12 +114,6 @@ header nav {
 	margin-top: 200px;
 
 }
-.link13 a{
-	color: #ed1e24;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 17px;
-	text-transform: uppercase;
-}
 
 /*SECTION3*/
 
@@ -150,35 +138,20 @@ header nav {
 	/*margin: 0px;*/
 	float: left;
 }
-.wrapper3 a{
-	color: #ed1e24;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 17px;
-	text-transform: uppercase;
-}
 
 /*SECTION4*/
 
 .link2{
 	float: left;
-	margin-right: 400px;
 }
 .link3{
 	float: left;
-	margin-right: 400px;
 }
 p{
 	color: #a09f9f;
 	/*font-family: 'montserrat';*/
 	font-family: 'Montserrat', sans-serif;
 	font-size: 16px;
-	padding-right: 100px;
-
-}
-.logo{
-	float: left;
-	padding-right: 400px;
-	padding-left: 100px;
 }
 .para{
 
@@ -188,7 +161,6 @@ p{
 }
 
 .last{
-	margin-top: 100px;
 	background-color: lightgrey;
 }
 .link21 a{
@@ -215,7 +187,6 @@ h3{
 	font-family: 'Montserrat', sans-serif;
 	font-size: 33px;
 	font-weight: bold;
-	/*width: 300px;*/
 }
 h4{
 	color: #a09f9f;
@@ -224,40 +195,41 @@ h4{
 	font-size: 19px;
 	text-transform: uppercase;
 	border-bottom: solid 1px #a09f9f;
-	/*width: 100px;*/
 	/*border-bottom-style: solid;*/
 
 }
- 
+
+.link12 .link13 .wrapper3 a{
+	color: #ed1e24;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 17px;
+	text-transform: uppercase;
+}
 
 
 /*FOOTER*/
 
 
 footer{
-	/*padding-top: 500px;*/
+	padding-top: 500px;
 	color: #a09f9f;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 12px;
 	text-transform: uppercase;
+	float: auto;
+	display:inline;
+	background-color: #939393;
+}
+footer{
 	background-color: lightgrey;
 	margin: 0px;
-	/*float: auto;*/
-	/*display:inline;*/
-	/*background-color: #939393;*/
 }
-
 .foot11 {
-	/*padding-top: 100px;*/
-	float: left;
-	text-decoration: none;
-	/*padding-right: 30px;*/
+	padding-top: 100px;
 }
 .foot12{
 	float: left;
-	padding-left: 1500px;
-	text-decoration: none;
-	/*position: absolute;*/
+	position: absolute;
 }
 
 

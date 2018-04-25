@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<title>CSS Display</title>
+		<!-- This example is teaching us to understand display inline and display block. If you're having trouble, check out the Display and Positioning lesson -->
+		<style type="text/css">
+			/* Make all spans and divs background pink so we can see the bounding boxes*/
+			span {
+				background:pink;
+				margin:1px;
+				padding:20px;
+				/*display: block;*/
+				/*height: 200px;*/
+				/*width: 200px*/
+			}
+
+			div {
+				background:pink;
+				margin:1px;
+				padding: 20px;
+				/*height: 200px;*/
+				/*width: 200px;*/
+			}
+			strong{
+				background-color: gold;
+				padding: 10px;
+				/*display:inline-block;        combine properties of inline and block*/
+				display: none;
+			}
+			section{
+				border:2px solid black;
+				margin-bottom: 500px;
+
+			}
+			.box{
+				width: 200px;
+				height: 200px;
+			}
+			.box1{
+				background-color: red;
+			}
+			.box2{
+				background-color: cyan;
+				/*display: none;*/
+				visibility: hidden;	
+			}
+			section:hover .box2{
+				/*display: block;*/
+				visibility: visible;
+			}
+
+		</style>
+	</head>
+	<body>
+		<span>I'm a span</span>
+		<span>I'm a span</span>
+		<span>I'm a span</span>
+
+		<div>I'm a div</div>
+		<div>I'm a div</div>
+		<div>I'm a div</div>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Aenean mi erat</strong>, ultrices nec sapien eget, fringilla blandit neque. Ut iaculis malesuada lacus imperdiet blandit. Nulla facilisi. Proin semper mollis porta. Praesent justo libero, mollis id ligula eget, blandit efficitur elit. Integer consequat libero sed sem blandit pharetra.</p>
+		
+		<section>
+			<div class="box box1"></div>
+			<div class="box box2"></div>
+		</section>
+	</body>
+</html>
