@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.visuallyhidden:not(:focus):not(:active) {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          margin: -1px;
+          border: 0;
+          padding: 0;
+          white-space: nowrap;
+          clip-path: inset(100%);
+          clip: rect(0 0 0 0);
+          overflow: hidden;
+    }
+    /*input[]*/
+	</style>
+</head>
+<body>
+	<form action="http://www.focuspocus.io/magic/a83bf3bda3192462d2126f1e9a61afff" method="POST" accept-charset="utf-8">
+		<label for="first_name">First Name</label>
+		<input type="text" name="first_name" id="first_name" placeholder="First Name" required >
+		<label for="last_name">Last Name</label>
+		<input type="text" name="last" id="last_name" placeholder="Last Name" >
+		<!-- readonly="true" -->
+		<!-- for and ID should always match -->
+		<h2>Contact Info</h2>
+		<label for="phone">Phone #</label>
+		<input type="tel" id="phone" name="phone_number" value="416-" >
+		<label for="email">e-Mail</label>
+		<input type="email" name="email" id="email" placeholder="email">
+		<input type="password" name="password">
+		
+	<h2>My Order</h2>
+		<label for="cheese_level">Level of Cheesiness(between 1 and 10)</label>
+		<input type="range" name="levelOfCheesiness" id="cheese_level" min="1" max="10">
+		<label for="small">Small</label>
+    	<input type="radio" name="pizzaSize" value="small" id="small">
+
+    	<label for="medium">Medium</label>
+    	<input type="radio" name="pizzaSize" value="medium" id="medium">
+
+    	<label for="large">Large</label>
+    	<input type="radio" name="pizzaSize" value="large" checked="true" id="large"> 
+
+    <h3>Toppings</h3>
+    	<label for="pepperoni">Pepperoni</label> 
+		<input type="checkbox" id="pepperoni" name="topping[]" value="pepperoni">
+
+		<label for="olives">Olives</label>
+		<input type="checkbox" id="olives" name="topping[]" value="olives" checked>
+
+		<label for="hotsauce">Hotsauce</label>
+		<input type="checkbox" id="hotsauce" name="topping[]" value="hotsauce">
+
+		<label for="mushroom">Mushroom</label>
+		<input type="checkbox" id="mushroom" name="topping[]" value="mushroom" checked>
+
+		<label for="bacon">Bacon</label>
+		<input type="checkbox" id="bacon" name="topping[]" value="bacon">
+
+		<label for="sunDriedTomatoes">Sun Dried Tomatoes</label>
+		<input type="checkbox" id="sunDriedTomatoes" name="topping[]" value="sunDriedTomatoes">
+
+		<label for="spice_level">spice_level</label>
+	<select name="levelOfSpiciness">
+    	<option value="noSpice">No Spice </option>
+    	<option value="mild">Mild </option>
+    	<option value="medium">Medium</option>
+    	<option value="spicy">Spicy</option>
+    	<option value="deathlySpicy" selected>Death.</option>
+	</select>
+
+	<h4>Special Instruction</h4>
+
+		<textarea name="specialInstructions" cols="30" rows="10"></textarea>
+
+		<input type="submit" value="Order Now">
+	</form>
+</body>
+</html>
