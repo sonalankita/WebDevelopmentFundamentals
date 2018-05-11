@@ -20,9 +20,7 @@ body{
           clip: rect(0 0 0 0);
           overflow: hidden;
     }
-    a{
-
-    }
+  
 .facebook {
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -74,7 +72,7 @@ body{
 }
 .wrapper{
 	width: 80%;
-	height: 80%;
+	height: 90%;
 	position: absolute;
 	top: 50%;
 	left: 50%;

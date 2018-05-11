@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://schepers.cc/xmlrpc.php">
+<title>Current State of Authoring Accessible SVG &#8211; Reinventing Fire</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Reinventing Fire &raquo; Feed" href="http://schepers.cc/feed" />
+<link rel="alternate" type="application/rss+xml" title="Reinventing Fire &raquo; Comments Feed" href="http://schepers.cc/comments/feed" />
+<link rel="alternate" type="application/rss+xml" title="Reinventing Fire &raquo; Current State of Authoring Accessible SVG Comments Feed" href="http://schepers.cc/authoring-accessible-svg/feed" />
+
+<!-- This site uses the Google Analytics by MonsterInsights plugin v 6.2.6 - https://www.monsterinsights.com/ -->
+<!-- Normally you will find the Google Analytics tracking code here, but the webmaster disabled your user group. -->
+<!-- / Google Analytics by MonsterInsights -->
+
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/schepers.cc\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.3"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='openid-css'  href='http://schepers.cc/wp-content/plugins/openid/f/openid.css?ver=519' type='text/css' media='all' />
+<link rel='stylesheet' id='flaton-fontawesome-css'  href='http://schepers.cc/wp-content/themes/flaton/css/font-awesome.min.css?ver=4.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='flaton-bitter-css'  href='//fonts.googleapis.com/css?family=Bitter%3A400%2C700&#038;ver=4.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='flaton-source-sans-pro-css'  href='//fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C700%2C400italic%2C700italic&#038;ver=4.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='flaton-flexslider-css'  href='http://schepers.cc/wp-content/themes/flaton/css/flexslider.css?ver=4.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='flaton-style-css'  href='http://schepers.cc/wp-content/themes/flaton/style.css?ver=4.9.3' type='text/css' media='all' />
+<script type='text/javascript' src='http://schepers.cc/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://schepers.cc/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='http://schepers.cc/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://schepers.cc/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://schepers.cc/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='It&#8217;s a Wrap!' href='http://schepers.cc/its-a-wrap' />
+<link rel='next' title='Annotators Anonymous' href='http://schepers.cc/annotators-anonymous' />
+<meta name="generator" content="WordPress 4.9.3" />
+<link rel="canonical" href="http://schepers.cc/authoring-accessible-svg" />
+<link rel='shortlink' href='http://wp.me/p11iXh-9p' />
+<link rel="alternate" type="application/json+oembed" href="http://schepers.cc/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fschepers.cc%2Fauthoring-accessible-svg" />
+<link rel="alternate" type="text/xml+oembed" href="http://schepers.cc/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fschepers.cc%2Fauthoring-accessible-svg&#038;format=xml" />
+<script type="text/javascript"><!--
+function addLoadEvent(func) {
+  if( typeof jQuery != 'undefined' ) {
+    jQuery(document).ready( func );
+  } else if( typeof Prototype != 'undefined' ) {
+    Event.observe( window, 'load', func );
+  } else {
+    var oldonload = window.onload;
+    if (typeof window.onload != 'function') {
+      window.onload = func;
+    } else {
+      window.onload = function() {
+        if (oldonload)
+          oldonload();
+        
+        func();
+      }
+    }
+  }
+}
+function wphc(){
+	var wphc_data = [1044065233,859453379,891627927,842400212,689975002,645691090,673266629,1869951173,1784899457,1869968535,1784899457,1819637143,1785555598,2099805836,1044197056,809123304,941697991,2104391583]; 
+
+	for (var i=0; i<wphc_data.length; i++){
+		wphc_data[i]=wphc_data[i]^1565875895;
+	}
+
+	var a = new Array(wphc_data.length); 
+	for (var i=0; i<wphc_data.length; i++) { 
+		a[i] = String.fromCharCode(wphc_data[i] & 0xFF, wphc_data[i]>>>8 & 0xFF, wphc_data[i]>>>16 & 0xFF, wphc_data[i]>>>24 & 0xFF);
+	}
+
+	return eval(a.join('')); 
+}
+addLoadEvent(function(){var el=document.getElementById('wphc_value');if(el)el.value=wphc();});
+//--></script>
+	<style type="text/css">
+			.site-title a,
+		.site-description {
+			color: #dd3333;
+		}
+		</style>
+	</head>
+
+<body class="post-template-default single single-post postid-583 single-format-standard">
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+	
+		<header id="masthead" class="site-header" role="banner">
+			<div class="container">
+			<div class="sixteen columns">
+					<div class="logo site-branding">
+													<h1 class="site-title"><a href="http://schepers.cc/" rel="home">Reinventing Fire</a></h1>
+																										<h2 class="site-description">Technology upside down and backwards</h2>
+											</div>
+				</div>
+		</div>
+		
+				<nav id="site-navigation" class="main-navigation" role="navigation">
+			<div class="container">
+				<div class="sixteen columns">
+					<button class="menu-toggle">Primary Menu</button>
+					<div class="menu"><ul>
+<li ><a href="http://schepers.cc/">Home</a></li><li class="page_item page-item-75"><a href="http://schepers.cc/about">About Doug Schepers</a></li>
+</ul></div>
+				</div>
+			</div>
+		</nav><!-- #site-navigation -->
+		
+	</header><!-- #masthead -->
+	
+	<div id="content" class="site-content container">
+
+	<div id="primary" class="content-area eleven columns">
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<article id="post-583" class="post-583 post type-post status-publish format-standard hentry category-accessibility category-authoring-tools category-svg">
+	<header class="entry-header">
+		<h1 class="entry-title">Current State of Authoring Accessible SVG</h1>
+		<div class="entry-meta">
+			<span class="posted-on"><i class="fa fa-clock-o"></i> <a href="http://schepers.cc/authoring-accessible-svg" rel="bookmark"><time class="entry-date published updated" datetime="2013-09-04T11:22:54+00:00">September 4, 2013</time></a></span>		</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+				<p>SVG has a few metadata features intended specifically for accessibility, and also provides the ability to use real text instead of images for textual content, just like HTML. This combination of text and metadata serves as one of the cornerstones of SVG&#8217;s accessibility; there are other features, such as scalability and navigation features, but this post will focus on the descriptive capabilities of SVG.</p>
+<p>I was recently looped into a <a href="http://lists.w3.org/Archives/Public/public-html-a11y/2013Aug/0026.html" target="_blank">discussion on the <em>@longdesc</em> attribute in HTML</a> which dealt in part with SVG accessibility, a subject I&#8217;m fascinated by. The specific debate is whether a <em>@longdesc</em> value should be applied for SVG, or whether SVG&#8217;s native accessibility features should be used, or both.</p>
+<p>Let me explain <em>@longdesc. </em>For short descriptions of a picture, a few words to a few sentences, you can simply include the text in the &lt;img&gt; element&#8217;s <em>@alt</em> attribute. The <em>@longdesc</em> attribute of an &lt;img&gt; element allows a content author to add a URL that leads to a longer text description of the image. You can read more in this <a href="http://webaim.org/techniques/images/longdesc" target="_blank">excellent article on <em>@longdesc</em> by WebAIM</a>.</p>
+<p>SVG provides a different way to provide text descriptions: the &lt;title&gt; and &lt;desc&gt; elements, which can be a child of any graphic or container element in SVG, and which contain text descriptions of the element. The &lt;title&gt; is meant for shortish names, while the &lt;desc&gt; can provide arbitrarily long descriptions; nothing in the SVG spec limits the length of these elements, but choosing the appropriate text is a best practice (as for any prose). These metadata elements can be read out via screenreaders (accessibility technology that speaks the available text aloud), along with the content of the &lt;text&gt;, &lt;tspan&gt;, and &lt;textPath&gt; elements.</p>
+<p>Because each SVG shape (or group of shapes) can have its own &lt;title&gt; and &lt;desc&gt;, a certain amount of structure and sequential flow is available to these screen readers. Each text or metadata element is read out in document order. Together, the series of text passages can comprise a complete description of the SVG graphic. Which is kinda cool… self-describing images!</p>
+<p>Well, that&#8217;s the idea, anyway. Now let&#8217;s look at it in practice, and specifically, at authoring SVG accessible content, and support in browsers and screenreaders.</p>
+<p><strong>Note:</strong> though I offer some specific guidance here, this is not really a tutorial; it&#8217;s more a background article on the topic, partly from a standardization point of view. I&#8217;ll be writing a tutorial aimed at developers and designers soon on <a href="http://docs.webplatform.org" target="_blank">WebPlatform.org</a>.</p>
+<p><span id="more-583"></span></p>
+<h3>Simple Example</h3>
+<p>Before we go any further, here is an example of a simple SVG file with titles and descriptions, just to provide some context:</p>
+<pre><code>
+  &lt;svg xmlns="http://www.w3.org/2000/svg"
+       xmlns:xlink="http://www.w3.org/1999/xlink"
+       width="100%" height="100%" viewBox="0 0 160 180"&gt;
+
+    &lt;title&gt;Star&lt;/title&gt;
+    &lt;desc&gt;2 overlapping triangles, forming a blue and gold 6-pointed star, with a blue circle in the background&lt;/desc&gt;    
+
+    &lt;circle cx="80" cy="90" r="75" fill="none" stroke="cornflowerblue" stroke-width="5"/&gt;
+    &lt;g style="stroke-width:5; stroke-linejoin:round;"&gt;
+      &lt;title&gt;Triangles&lt;/title&gt;
+      &lt;polygon id="triangle-up" points="80,10 150,130 10,130" fill="gold" stroke="cornflowerblue"&gt;
+        &lt;title&gt;Upwards triangle&lt;/title&gt;
+        &lt;desc&gt;A gold equilateral triangle, pointing upwards, with a blue outline.&lt;/desc&gt;  
+      &lt;/polygon&gt;
+      &lt;polygon id="triangle-down" points="150,50 80,170 10,50" fill="cornflowerblue" stroke="gold"&gt;
+        &lt;title&gt;Downwards triangle&lt;/title&gt;
+        &lt;desc&gt;A blue equilateral triangle, pointing downwards, with a gold outline.&lt;/desc&gt;  
+      &lt;/polygon&gt;
+    &lt;/g&gt; 
+  &lt;/svg&gt;
+</code></pre>
+<p>And here&#8217;s what it looks like (proof positive that I&#8217;m not a designer):</p>
+<p><a href="http://schepers.cc/svg/accessibility/authoring/star.svg"><img class="aligncenter" alt="SVG star" src="http://schepers.cc/svg/accessibility/authoring/star.svg" width="160" height="180" /></a></p>
+<p>Here, we have a title and description for the whole document, and the 2 triangle graphics elements in the document also have titles and descriptions; in addition, the &lt;g&gt; (group element) wrapping the triangles also has a title. In a more complex graphic, you might have nested groups, each describing their contents, which could be explored in hierarchical detail by a screenreader user. In this case, going into this level of detail on this simple graphic is overkill; the document-level description would suffice, and the extra titles and descriptions would be more information than the average user would want to know, so I would not consider this a best practice. But it serves as an easily understood entry point.</p>
+<h3><em>@longdesc</em></h3>
+<p><em>@longdesc</em> is controversial. It was deprecated in HTML5, and <a title="W3C HTML5 Image Description Extension (longdesc) specification" href="https://dvcs.w3.org/hg/html-proposals/raw-file/default/longdesc1/longdesc.html" target="_blank">resurrected</a> by accessibility advocates; many <a title="WHATWG bog entry by Mark Pilgrim" href="http://blog.whatwg.org/the-longdesc-lottery" target="_blank">differ strongly</a> on its value. I&#8217;m not going to opine on the attribute in general, just its applicability to SVG. I&#8217;m not sure it&#8217;s necessary to use it for SVG. On the email thread, John Foliot, accessibility advocate and outspoken champion of the <em>@longdesc</em> attribute, pointed me to a blog post he&#8217;d written on <a href="http://john.foliot.ca/wysiwyg_longdesc/" target="_blank">HTML </a><a href="http://john.foliot.ca/wysiwyg_longdesc/" target="_blank">authoring tools for </a><em><a href="http://john.foliot.ca/wysiwyg_longdesc/" target="_blank">@longdesc</a></em>, and asked if the authoring-tool landscape for adding &lt;title&gt; and &lt;desc&gt; in SVG was on par with that.</p>
+<p>I think it is, for the most part… with some notable exceptions.</p>
+<h3>Inkscape</h3>
+<p>Inkscape is the most popular open-source SVG authoring tool. It provides a few ways to add metadata to various parts of the document.</p>
+<p><a href="http://schepers.cc/svg/accessibility/authoring/inkscape-title-desc.png"><img class="aligncenter" alt="Inkscape's metadata editing dialogs, with 3 dialog boxes" src="http://schepers.cc/svg/accessibility/authoring/inkscape-title-desc.png" width="516.5" height="430" /></a></p>
+<ol>
+<li><strong><span style="line-height: 19.5px;">Document-level title and description:</span></strong><span style="line-height: 19.5px;"> this is probably the most important capability, though the least technically interesting; Inkscape gets this mostly right, though I have a suggestion for improvement. In the right-hand dialog, labeled “Document Metadata” (<em>File → Document Metadata…</em>), there is a space for a title (“Tilted Stars”), and another for the description (“Three 5-pointed stars in various colors, sizes, and positions”). Unfortunately, the description field populates an RDF metadata block (thus the confusing jargon “Dublin Core”, which is the name of a basic ontology around document details) rather than a &lt;desc&gt; element; this should actually be a simple fix for Inkscape, if we convince them that this is important… and it is important, because it will improve accessibility. (<strong>Technical note:</strong> they could kill two birds with one stone by using RDFa rather than XML-RDF; if you don&#8217;t understand what this means, that&#8217;s probably for the best.) In any case, authors are probably more likely to write a single title and description for the whole document, than for each element, and a simple overall description is more easily consumed, so the document-level metadata are important.</span></li>
+<li><strong>Per-shape title and description:</strong> this is more technically interesting, and more interactive, but also more labor-intensive. In the top-left dialog, labeled “Object Properties” (select a shape, then <em>Object → Object Properties…</em>), there are spaces for the title (“Star”) and the description (“A yellow 5-pointed star”), which are directly inserted into the document as child &lt;title&gt; and &lt;desc&gt; elements of the shape element, meaning that they describe that specific element. Why is this interesting? Because if each shape has its own title and description, a user can explore the document with a screenreader, instead of relying on the gist provided by the author; as the document changes, with shapes added or removed, there would not need to be a detailed overall description that might go out of sync. And while no screenreader I&#8217;ve seen does this, there is the possibility for even more in-depth automatic descriptions about the relationship of different shapes; in this case, a sophisticated user agent could describe the scene like, ”There is a large yellow star at the top; below, there is a smaller blue star on the left, and a small red star on the right.” This would be tricky to do for arbitrary graphics, but for well-defined, structured graphic types, like charts and graphs, it might be pragmatically possible; I’ll touch on this later, when I talk about ARIA.</li>
+<li><strong>Document tree view:</strong> the bottom-left dialog, labeled “XML Editor” (<em>Edit → XML Editor…</em>), shows each element in a nested tree format, including the &lt;title&gt; and &lt;desc&gt; child elements of the &lt;path&gt;. It&#8217;s a bit geeky, but you can use this dialog to add, remove, duplicate, or rearrange elements manually, so you could add &lt;title&gt; and &lt;desc&gt; by hand. But why would you, when there&#8217;s a dialog for that? Well, you could use it to add a document-level &lt;desc&gt;, or to group elements together and add a single &lt;title&gt; and &lt;desc&gt; to the group (i.e., &lt;g&gt; element). And it&#8217;s sometimes useful to see the structure of your document, in general.</li>
+</ol>
+<p>I give Inkscape a <strong>B+</strong> for basic accessibility metadata authoring! Fix how the document description is embedded in the file, and make the workflow a bit more intuitive, and Inkscape will get an A.</p>
+<h3>Illustrator</h3>
+<p>Adobe Illustrator is hands-down the most popular vector drawing tool for professional designers, and it exports SVG with no problem. It also allows an author to set a title and description for the whole document, though I don&#8217;t know how to do so at the level of the individual elements. If this functionality is there, it&#8217;s not immediately obvious to me; it would be easy to add, though these drawing tools are so complex already, it might get lost in the smorgasbord of features.</p>
+<p><a href="http://schepers.cc/svg/accessibility/authoring/illustrator-title-desc.png"><img class="aligncenter" alt="Adobe Illustrator with File Info dialog" src="http://schepers.cc/svg/accessibility/authoring/illustrator-title-desc.png" width="557" height="438.5" /></a></p>
+<p>&nbsp;</p>
+<p>As it is, it&#8217;s not absolutely intuitive to get to this dialog, nor is it part of a typical workflow, unless the author is trying to embed license and attribution, since it&#8217;s part of the same dialog; I don’t know how common this is in practice. On the “File Info” dialog (<em>File → File Info…</em>), there are fields for Document Title and Description.</p>
+<p>Unfortunately, and surprisingly, this does <strong>not</strong> save the file with an SVG &lt;title&gt; and &lt;desc&gt;, as you might expect; if you do choose the option to save the SVG file with XMP (Adobe&#8217;s Extensible Metadata Platform), it still doesn&#8217;t use the native elements, and inserts a huge block of RDF-XML markup, which seems to contain a raster (bitmap) fallback of the image, and dramatically bloats the file size!</p>
+<table>
+<tbody>
+<tr>
+<th>option</th>
+<th>file size</th>
+<th>size increase</th>
+</tr>
+<tr>
+<th>no metadata</th>
+<td>715 bytes</td>
+<td>1x</td>
+</tr>
+<tr>
+<th>simple SVG &lt;title&gt; and &lt;desc&gt;</th>
+<td>780 bytes</td>
+<td>1.09x</td>
+</tr>
+<tr>
+<th>XMP, no raster fallback</th>
+<td>33,965 bytes</td>
+<td>47.5x</td>
+</tr>
+<tr>
+<th>XMP, with raster fallback (default)</th>
+<td>47,596 bytes</td>
+<td>68.7x</td>
+</tr>
+</tbody>
+</table>
+<p>Adding a title and description makes the file nearly 70 times larger by default (or a mere 47 times if the raster image is manually removed), which is not Web friendly, and doesn&#8217;t help accessibility; that&#8217;s the worst of both worlds. As a exercise in absurdity, I opened a simple Illustrator SVG file in the ChromeVox screenreader, with title and description in XMP RDF markup just the way Illustrator saves it, and let it read out all the metadata; it took an astonishing 45 minutes of gibberish as the screenreader tried its best to meaningfully speak the “text” content (the embedded encoding as JPEG, and subsequent color settings) of a file that contained a simple yellow star. Obviously, this was not meant for consumption by screenreaders.</p>
+<p>Based on this, I have to give Adobe Illustrator a <strong>D</strong> for basic accessibility metadata authoring. It doesn&#8217;t currently output accessible SVG, but it does have some of the infrastructure in place.</p>
+<p>How could they fix it? Simple: add fields in the “SVG Options” save dialog for title and description, and save them as SVG elements. That would also solve the workflow problem of this being hard to find. Consider adding a way to add a title and description on individual shapes and groups, either in a dialog available from the <em>Objects</em> menu or in the <em>Options</em> modal dialog from the <em>Layers</em> sidebar (where you can currently set the <em>id</em> attribute from the <em>Name</em> field).</p>
+<h3>Hand-Authoring</h3>
+<p>I have to confess, having done SVG for 13 years or so, I am pretty comfortable with hand-authoring SVG. This is crazy, however, and I don&#8217;t recommend it. That said, it&#8217;s pretty simple even for an SVG newbie to take an SVG file you&#8217;ve drawn in an authoring tool, open in the text editor of your choice,  and manually add metadata; browser debugging tools make it even easier to find just the right elements. If you&#8217;re modifying it for even the most basic interactivity, you&#8217;re probably going to be doing this step anyway, so adding accessible metadata while you&#8217;re at it is not an onerous task.</p>
+<p>Most people don&#8217;t create their own SVGs. They typically reuse SVG icons or images from a image-sharing service like <a href="http://thenounproject.com/" target="_blank">The Noun Project</a>, <a href="http://openclipart.org/" target="_blank">OpenClipArt</a>, or <a href="http://icomoon.io/" target="_blank">IcoMoon</a>, and integrate them into their site as-is, linked directly from HTML or referenced from CSS, or combine them together in a single large SVG file with multiple images that make a single scene (which is what I often do). I call this combination of SVG images the “icon collage technique”. This has been extremely effective for me, especially when I&#8217;m making slides for a presentation, though it&#8217;s not without its challenges, mostly owing to the different sources of the images; the images are often of inconsistent quality, and almost none of them include their own titles or descriptions; from a combinatorial perspective, they are also less reusable because they typically aren&#8217;t auto-scaling, and most people don&#8217;t know how to resize the SVG. These image-sharing sites should optimize for this kind of reuse, and should provide titles and simple descriptions by default, so that an SVG collage is somewhat self-describing with no extra work on the part of the author.</p>
+<h3>Scripted SVG</h3>
+<p>This is the real payoff. Most SVG files, especially graphs and charts, are neither lovingly hand-crafted nor painstakingly drawn in a drawing tool. They&#8217;re scripted, server-side with <a href="http://www.r-project.org/" target="_blank">R</a> or PHP or other server languages, or increasingly client-side with JavaScript, with Raphaël or D3.js.</p>
+<p>One of the most popular JavaScript libraries for creating data visualizations is <a href="http://d3js.org/" target="_blank">D3.js</a>, which stands for “Data Driven Documents. D3.js gives the author a lot of power, because it leverages SVG&#8217;s DOM structure and extends it with syntactic sugar and helper libraries. Adding a &lt;title&gt; element to a bar in a bar chart, for example, is trivially easy in D3.js (and Raphaël, for that matter).</p>
+<p>Here&#8217;s a <a href="http://schepers.cc/svg/accessibility/authoring/d3/metadata/11_browser_tooltip.html" target="_blank">small demo of a “tooltip” example</a> (<a title="Code sample of inserting titles in a bar chart using d3.js" href="https://raw.github.com/alignedleft/d3-book/master/chapter_10/11_browser_tooltip.html" target="_blank">source code</a>) from chapter 10 from Scott Murray&#8217;s “Interactive Data Visualization for the Web”, a good book on getting started with D3.js. In this example, sighted users (without mobility problems) are shown the data in 2 ways, as a rough gist from the visual representation of the bars, and as raw numbers in the tooltip on hovering (a little nice-to-have easter egg); users of a screenreader will get the raw numbers from the title. The relevant part of the code, which creates a bar chart from a simple array of numbers (represented by the object <em>d</em>), is here:</p>
+<pre><code>
+  .append("title")
+    .text(function(d) {
+      return d;
+    })
+</code></pre>
+<p>Four short lines of code, saying “add a &lt;title&gt; element here, with the text reflecting the value of the bar”. A meaningful description of the whole chart would be more effort, but remember that the elegance of SVG’s “discrete serial aggregate” metadata model (my fancy way of saying “building up the big picture one relevant bit at a time”) doesn&#8217;t need more lengthy descriptions for structured content; comprehension is an emergent property of the graphic, just as it is for sighted users.</p>
+<p>This is the way to go for dynamically generated content that may change day-to-day, or even be updated in real-time.</p>
+<h3>A Real Example: Data Visualization</h3>
+<p>What did I mean by all that mumbo-jumbo? And isn&#8217;t that bar chart a little abstract, with no real data? Let me show you a different approach, with real data and a real bar chart (albeit a static one).</p>
+<p>In fact, hidden metadata is not necessarily the best way to provide a description. Visible text can be even better, as the <a href="http://webaim.org/techniques/images/longdesc" target="_blank">WebAIM <em>@longdesc</em> article</a> says; that way, it benefits everyone. I took the liberty of recreating <a href="http://webaim.org/techniques/images/media/graph.jpg" target="_blank">their bar chart from that example</a>, in SVG (yes, I did it by hand, because there&#8217;s something wrong with me).</p>
+<p><a href="http://schepers.cc/svg/accessibility/authoring/graph-desc.svg"><img class="aligncenter" alt="" src="http://schepers.cc/svg/accessibility/authoring/graph-desc.svg" width="510" height="350" /></a></p>
+<p>It&#8217;s not a perfect duplication, but it&#8217;s good enough. I took a couple liberties (like adding the percentage symbol to the values) to make it work better. If you follow the link and view the source, you&#8217;ll see that I didn&#8217;t really use &lt;title&gt; or &lt;desc&gt; elements… but this example should render in a screenreader almost identically to WebAIM&#8217;s <em>@longdesc</em> text:</p>
+<blockquote><p>Percentage of Total Noninstitutionalized Population Age 16-64 Declaring One or More Disabilities</p>
+<ul>
+<li>Total declaring one or more disabilities 18.6%</li>
+<li>Sensory (visual and hearing) 2.3%</li>
+<li>Physical 6.2%</li>
+<li>Mental 3.8%</li>
+<li>Self-care 1.8%</li>
+<li>Difficulty going outside the home 6.4%</li>
+<li>Employment disability 11.9%</li>
+</ul>
+</blockquote>
+<p>How? Trivial: I just made the text from the legend and the values labels of the bars the same &lt;text&gt; element, positioning the values above each bar with the &lt;tspan&gt; element. Remember, text in SVG is rendered (or read) in document order, not in positional order.</p>
+<p>The beauty of this approach is that it degrades fairly gracefully in browsers that don&#8217;t support SVG (or even images), even for sighted users: the text content is just presented as text, so for information graphics, a simple list of the relevant data is better than missing the data completely.</p>
+<p>And for authors, the wonderful thing about using visible text is that Inkscape, Illustrator, and I&#8217;d reckon any other vector editor already supports this splendidly, with lots of options to please designers. The days when you needed to use images for interesting-looking text are all but gone, with the rise of Web Fonts (and the WOFF specification) and the proliferation of hundreds of free and commercial fonts available for use on the Web. The only criticism I have for Inkscape and Illustrator here is that when the author chooses to convert the text to an outline rather than real text, so they can tweak the glyphs, neither authoring tool automatically provides a &lt;title&gt; with the replaced text for the containing group (or <em>layer</em>, in Illustrator parlance); this would be a simple and intuitive fix for accessibility, one that they author wouldn&#8217;t even have to know about or set explicitly. For this reason, I&#8217;m giving both Inkscape and Illustrator a <strong>B</strong> for accessible visible text authoring; each will get an A when they automatically provide the alternative text in the &lt;title&gt;.</p>
+<p>Not to dismiss <em>@longdesc</em>, which may have value for photos and graphics that were created by someone else, but using visible text and metadata internal to the image file itself  is far more elegant. No complicated procedure to create additional content which could get out of sync, no separate location/URL for that content, no need to force someone to navigate to that content… just a pure, simple inline experience of the same content as everyone else, just in a different modality, in which the description is an inherent characteristic of the graphic, and travels with the graphic wherever it is used.</p>
+<p>The question now is, do screenreaders support it?</p>
+<h3>Browser and Screenreader Support</h3>
+<p>If you&#8217;re using a screenreader to read this article, you may not have experienced that elegant solution that I described. Why? Because your screenreader may not yet support SVG completely, or at all. To you, I apologize, and I&#8217;m working to make it better. Henny Swan, an accessibility expert, wrote a blog post a few years ago <a href="http://www.iheni.com/just-how-accessible-is-svg/" target="_blank">expressing concern about support for SVG in browsers and AT</a>, which has genuine implications for accessibility. Fortunately, I believe that support has improved since then.</p>
+<p>I&#8217;ve done several experiments with ChromeVox, a screenreader extension for Chrome, and it&#8217;s older cousin FireVox, for Firefox. Both will treat inline SVG (that is, SVG content inside an HTML file) as ”unknown elements”, and consequently will read out the text contents of elements like &lt;title&gt;, &lt;desc&gt;, &lt;text&gt;, &lt;tspan&gt;, and &lt;textPath&gt;, and will sometimes find links (SVG also uses the &lt;a&gt; element, though with slightly different attributes; this will change to match HTML5 for SVG 2). This is good. However, neither will read standalone SVG files, nor read SVG files referenced in &lt;iframe&gt;, &lt;object&gt;, &lt;embed&gt;, or &lt;img&gt; elements of an HTML page; this should be fairly simple to change, however, and I&#8217;ve started discussions with the developers about this. Since script libraries like Raphaël and D3.js produce inline SVG by default, this is not an issue for most JavaScript solutions.</p>
+<p>On the one hand, screenreaders still present a challenge, and they are inconsistent in which elements they read out. In order to not provide too much data, they should limit what they read only to SVG elements, not any metadata (like RDF licenses or alternate encodings) that happens to be embedded in the file. In fact, the text contents of the &lt;metadata&gt; element should simply be skipped over completely, as should the contents of the &lt;script&gt; and &lt;style&gt; elements; none of these is meant for human consumption.</p>
+<p>After <a href="http://openwebcamp.com/" target="_blank">Open Web Camp 2013</a> last month, where I gave my “Invisible Visualization” talk on making data visualizations accessible, I spent some time with a set of people –<a title="Glenda Sims on Twitter" href="https://twitter.com/goodwitch‎" target="_blank">Glenda Sims</a>, <a title="Estelle Weyl on Twitter" href="https://twitter.com/estellevw‎" target="_blank">Estelle Weyl</a>, <a title="Katie Haritos-Shea on Twitter" href="https://twitter.com/Ryladog‎" target="_blank">Katie Haritos-Shea</a>, and <a title="Denis Boudreau on Twitter " href="https://twitter.com/dboudreau‎" target="_blank">Denis Boudreau</a>– to do some basic SVG-in-HTML testing with multiple browsers in combination with NVDA, JAWS, and VoiceOver (three common screenreaders), with generally positive results on reading SVG &lt;title&gt; elements. We didn&#8217;t record the results, and I didn&#8217;t examine the tests in detail,  so we clearly need more robust testing, but anecdotally,  I was pleased with the improvement  in support from just a couple years ago.</p>
+<p>James Craig, an Apple accessibility expert, <a title="HTML Accessibility Task Force email list" href="http://lists.w3.org/Archives/Public/public-html-a11y/2013Aug/0040.html" target="_blank">informed me</a> that in WebKit, the SVG DOM (that is, the browser&#8217;s internal model of the document) is exposed to the accessibility APIs, so &lt;title&gt; and &lt;desc&gt; elements should be available to any DOM-based screenreader. This is also encouraging.</p>
+<p>Identifying and activating links inside SVG are still a consistency challenge for screenreaders (at least in ChromeVox); this is less important for simple images, but for anyone wanting to use an SVG as a kind of advanced image map, or who wants to add drill-down capability to their chart, this is a real problem that screenreaders need to address.</p>
+<p>Also, currently all the text in the SVG is (at least in some screenreaders) read out as a single passage, rather than as structured, navigable items; it would be better to treat each textual element as an individual item, so a screenreader user could easily go back to repeat the last item, or the first item on the “list”. Treating the text content as a list (or set of nested lists) would be a good general algorithm.</p>
+<p>To keep momentum going forward, I started a <a href="http://www.w3.org/community/svga11y/" target="_blank">W3C Accessible SVG Community Group</a> a few weeks ago, and it&#8217;s already got 18 participants; we&#8217;ve started planning a hackathon, maybe collocated with the SVG Working Group&#8217;s face-to-face meeting in October, to test SVG accessibility. We will publish a report, and after that, we should have a much better idea on where the current state of SVG accessibility support is, and what specifically needs to be improved.</p>
+<h3>Ugly Bits</h3>
+<p>Lest you think that browser support is the only problem here, let me disabuse you of the notion that SVG accessibility techniques are otherwise bulletproof. In the static chart example above, I told you the first thing someone using a screenreader should hear. But I didn&#8217;t tell you the last part, which the screenreader will speak after reading out the useful information:</p>
+<blockquote><p>Types of Disability<br />
+Percentage of Total U.S. Population (178,687,234)<br />
+0 2 4 6 8 10 12 14 16 18 20</p></blockquote>
+<p>These are the axes labels… mostly noise left over from the depiction of the data, an artifact of the visual aspect (well, actually, the y-axis label is useful information, but it&#8217;s presented out of context).</p>
+<p>It&#8217;s easy enough for a screenreader user to simply skip over these… if they know that they aren&#8217;t important, and that they aren&#8217;t misplaced in the middle of important content. But how could they know that the series of numbers are just the axis tickmarks, and not a series of values? Especially people who&#8217;ve been blind from birth, and have never seen a bar chart, and don&#8217;t know what bits are core information and what bits are extraneous.</p>
+<p>So, it&#8217;s important for an author to put the information in the right sequence, in the correct document order; necessary, but not sufficient.</p>
+<p>An author could make judicious use of the <a title="W3C Accessible Rich Internet Applications (WAI-ARIA) 1.0 spec" href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-hidden" target="_blank">aria-hidden attribute</a> to hide the extraneous content from screen readers, while still rendering it on-screen. ARIA stands for “Accessible Rich Internet Applications”, and it defines a set of roles, states, and properties that help represent various widgets, such as forms or user interface controls, to a user that can&#8217;t see the visible indicators of state or intent; if you have a purely CSS checkbox or selector button, ARIA can help non-sighted users to know that it&#8217;s unchecked, or which option-state is selected.</p>
+<p>The ARIA attribute<em> aria-hidden=&#8221;true&#8221;</em> is the screenreader equivalent of the CSS rule <em>visibility: hidden;</em>; in other words, while elements will still be rendered to the screen for sighted users, they will not be read out for non-sighted users. It‘s not necessary to use this on any graphics element, or to worry about the document order of graphics elements without titles, because they should be “invisible” to screenreaders anyway.</p>
+<p>To emphasize that, at the risk of seeming obvious, screenreaders should not typically try to “read out” the characteristics of graphics elements directly. Perhaps there could be a special mode in which they do so, but even sighted users would have a hard time making sense of all but the most basic SVG shape descriptions; you might be able to mentally picture what this element looks like, what it&#8217;s shape is, where it’s positioned, how big it is, and what color it is:</p>
+<pre><code>  &lt;circle cx="85" cy="120" r="20" fill="crimson" /&gt;
+</code></pre>
+<p>But could you tell what this looks like?</p>
+<pre><code>  &lt;polygon points="72.75,100 100.25,100 112.75,122.75 100.25,145.5 72.75,145.5 60.25,122.75" fill="rgb(128, 0, 128)" /&gt;
+</code></pre>
+<p>It&#8217;s a simple shape, a purple hexagon; &lt;path&gt; elements get far more complex and impenetrable.</p>
+<p>So, it‘s up to the author to provide text equivalents for different graphical shapes. But does it matter that on a bar chart, “Employment disability” is represented by a blue rectangle about 79 pixels high and 33 pixels wide? No. So the author has to provide an appropriate level of abstraction and meaning, as well.</p>
+<p>In addition to not knowing what bits are important, another unfortunate aspect of simple document-order reading of text is that screenreader users can&#8217;t easily navigate around a chart, comparing the values of different bars, the way a sighted user could.</p>
+<p>ARIA may be the answer here. As currently defined, ARIA is specifically aimed at user-interface controls, like sliders or choice menus. For the most part, GUI controls are a concrete set of well-defined and bounded conventions, each fitting a specific task, which users learn to manipulate in pre-determined ways; data visualizations represent a different set of conventions with a similar set of constraints. So, we could extend ARIA to represent the roles, states, and properties not only of GUIs, but of data visualizations, to allow visually-impaired users to explore and interact with the visualizations in much the same way as with a GUI. We could add much-need structure to these data visualizations, with new ARIA roles and states, and improve navigation options.</p>
+<p>For example, look at a bar chart. A sighted user will scan the axes to contextualize, then compare different specific bars to one another, or look at the overall trend; a y-axis with the numbers 0–20, or an x-axis with a set of dates, is meaningful, because it sets the range of values or dates. For a screenreader user with some future ARIA markup on those axes, the endcaps of the numeric or date range could be spoken (e.g., ”0 to 20,000, in increments of 1 thousand”, or  “January of 2007 to December of 2011, in quarters”). But for now, that&#8217;s speculative.</p>
+<p>In the meantime, don&#8217;t add titles when visible text will suffice, and don’t duplicate information in a &lt;title&gt; or &lt;desc&gt; that&#8217;s already available as text. Duplicated information is repetitive, redundant, superfluous, periphrastic, and unnecessary. It&#8217;s extra work anyway, so just don&#8217;t do it.</p>
+<h3>Why Add Metadata?</h3>
+<p>Okay, so why should you do this in the first place? Assuming common decency isn&#8217;t enough reason, and that you&#8217;re laboring under the delusion that you don&#8217;t have a visually-impaired audience (or that you won&#8217;t be part of that demographic as you get older), you should understand that providing lots of titles and descriptions helps make your content more findable; Google indexes SVG files now, and they use text content as part of their search criteria. And it also makes it better for understandability; sure, it&#8217;s easy to find an star element by looking for</p>
+<pre><code>  
+  &lt;path d="M362.85712,640.93361 239.55735,528.28863 76.862579,565.99989145.89259,413.92562
+           59.751606,270.84712 225.71427,289.50503 335.17099,163.3664 368.71155,326.97188
+           522.5005,392.09242 377.26704,474.54827 z" 
+           transform="translate(-20,-108.57143)"/&gt;
+</code></pre>
+<p>… but if you add a &lt;title&gt;Star&lt;/title&gt;, it&#8217;s even easier to find, for you and for anyone maintaining or reusing your content. And if that&#8217;s still not enough rationale, in most browsers, the &lt;title&gt; is revealed as a tooltip on mouseover, so in your map of your country, each state or region gets its own tooltip for free.</p>
+<h3>Author Awareness</h3>
+<p>So, I&#8217;ve talked at length about the <em>what</em>, <em>how</em>, and <em>why</em> of SVG accessibility, and now I want to say something about the <em>who</em>: <strong>you!</strong> Well, you and a bunch of other people. None of this is hard, not nearly as hard as simply making people aware of the technique and the impact it has. So, if you&#8217;re using SVG, use these techniques so others become aware of them; if you&#8217;re not using SVG, start doing so. Tell other people about how to make their graphics accessible (and tell them to use SVG). If you have a script library or application that outputs SVG, try to make the SVG accessible.</p>
+<p>For my part, once we have things a bit better defined, I&#8217;ll be writing this up in a more comprehensive, instructional style on <a href="http://docs.webplatform.org/" target="_blank">Web Platform Docs</a>, so more people discover it.</p>
+<p>And if you&#8217;re interested in helping us clarify the current state of SVG accessibility, and to plan future improvements, I encourage you to join the <a href="http://www.w3.org/community/svga11y/" target="_blank">W3C Accessible SVG Community Group</a>. It&#8217;s a free and open group, with smart, passionate people who are helping make the world a better place (so if you&#8217;re not smart, apathetic, or kind of a cynical, self-absorbed jerk, you don&#8217;t need to join).</p>
+<h3>Describler</h3>
+<p>In writing this blog post, I scratched my own itch and started a little prototyping project called <a title="Describler: an SVG accessibility tool" href="http://describler.com" target="_blank">Describler</a> to help improve your SVG&#8217;s accessibility. It lets you upload your SVG file, and provides you a graphical tree view of your current SVG, and lets you add or change titles and descriptions.</p>
+<p>Using the miracle of modern browser technology, it even lets you hear how your SVG should sound in a screenreader, using the experimental <a title="Web Speech API draft specification at W3C Community Groups" href="https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html" target="_blank">Web Speech API</a> (which sadly only seems to work in Chrome, and only then after you enable its flag). I&#8217;m hoping this spec moves forward quickly, and is adopted by other browsers, because it&#8217;s super-cool.</p>
+<p>Describler does a few more things that help accessibility and reusability as well, like making your SVG auto-scaling, so you can use it at any size, and it will grow or shrink to fit the size of the container.</p>
+<p>I did this as my W3C Geek Week project, where we set aside our normal work to improve our skills; I really enjoyed getting to code again, and I hope to keep expanding Describler, so maybe I&#8217;ll talk more about it another day. I have a bunch of ideas for improvements, and if you have suggestions too, make a comment or pull request on <a href="https://github.com/shepazu/describler" target="_blank">my github repo</a>. (Be kind, please… I knocked this out in just a few days, and I know the code and interface are a bit ugly still.)</p>
+<h3>Conclusion</h3>
+<p>Adding titles and descriptions is only one aspect of accessibility in SVG. Interactivity and keyboard navigation, zooming and panning, link activation, document hierarchy, color choices, animation control, and many other factors come into play for various accessibility needs. But providing non-visual representation for users with visual disabilities is the most obvious accessibility challenge for a graphics format, and it is the closest analog of the behavior of <em>@longdesc</em>.</p>
+<p>Not all authoring tools have sufficient support for adding accessibility. They should add it, and we (those of us in standards, in the SVG WG, and the people using those tools) should define better how they should do it. But adding accessibility metadata features are easy, and visible text is already well-supported in authoring tools, so I&#8217;m optimistic. I hope tools like Describler will help, as well, and will fill the gap until native authoring tool support is better.</p>
+<p>My current inclination is that more testing is needed to determine how widely SVG accessibility features are supported, and in the meantime, I don&#8217;t see harm in providing a <em>@longdesc</em>, unless it simply duplicates what&#8217;s already in the SVG (remember what I said about duplication). My prediction is that for script-based data visualizations, at least, there&#8217;s almost no chance that people will provide a <em>@longdesc</em>, and a reasonably good chance they&#8217;ll provide discrete titles; for other uses of SVG that might need a longer description, there&#8217;s still a better chance that people will provide a &lt;desc&gt; than a <em>@longdesc</em>, because even with authoring challenges, it&#8217;s easier to enhance one file than create and maintain two interlinked files. As a pragmatic matter, I think the notion of using <em>@longdesc</em> with SVG is largely academic, and will be of decreasing importance going forward.</p>
+<p>I&#8217;ve read claims that <em>@longdesc</em> is a requirement in some organizations and countries, by law or policy; if this is the case, I believe that SVG&#8217;s native capabilities should satisfy those requirements, and policies should be revised to address that, where applicable.</p>
+<p>The more accessible SVG content is produced, the more compelling the case for native browser and AT support, and the better the experience for people who need an alternative for graphics. So, go make some great content, please!</p>
+<p>&nbsp;</p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="cat-links"><i class="fa fa-list-alt"></i><a href="http://schepers.cc/category/accessibility" rel="category tag">Accessibility</a>, <a href="http://schepers.cc/category/authoring-tools" rel="category tag">Authoring Tools</a>, <a href="http://schepers.cc/category/svg" rel="category tag">SVG</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+				<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+		<div class="nav-links">
+			<div class="nav-previous"><a href="http://schepers.cc/its-a-wrap" rel="prev"><span class="meta-nav">&larr;</span>&nbsp;It&#8217;s a Wrap!</a></div><div class="nav-next"><a href="http://schepers.cc/annotators-anonymous" rel="next">Annotators Anonymous&nbsp;<span class="meta-nav">&rarr;</span></a></div>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+			
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			4 thoughts on &ldquo;<span>Current State of Authoring Accessible SVG</span>&rdquo;		</h2>
+
+		
+		<ol class="comment-list">
+			
+	<li id="comment-1163" class="comment even thread-even depth-1">
+		<article id="div-comment-1163" class="comment-body">
+			<footer class="comment-meta">
+				<span class="comment-author vcard">
+					<img alt='' src='http://0.gravatar.com/avatar/c37314f8db58c44d9b59b74dc2705596?s=40&#038;d=identicon&#038;r=pg' srcset='http://0.gravatar.com/avatar/c37314f8db58c44d9b59b74dc2705596?s=80&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-40 photo' height='40' width='40' />					<cite class="fn"><a href='http://tink.co.uk/' rel='external nofollow' class='url'>Léonie Watson</a></cite>				</span><!-- .comment-author -->
+
+				<span class="comment-metadata">
+					<a href="http://schepers.cc/authoring-accessible-svg#comment-1163">
+						<time datetime="2013-09-04T11:51:54+00:00">
+							- September 4, 2013 at 11:51 am						</time>
+					</a>
+									</span><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Terrific intro article Doug. </p>
+<p>You mentioned using the Web Speech API. It sparked a thought &#8211; could the Web Audio API be used to supplement the accessibility of SVG charts/graphs? Changing pitch/tone to indicate peaks/troughs etc.</p>
+			</div><!-- .comment-content -->
+
+					</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-1164" class="comment byuser comment-author-magister bypostauthor odd alt thread-odd thread-alt depth-1">
+		<article id="div-comment-1164" class="comment-body">
+			<footer class="comment-meta">
+				<span class="comment-author vcard">
+					<img alt='' src='http://1.gravatar.com/avatar/4888af57dc4c4f083841356d75a6b272?s=40&#038;d=identicon&#038;r=pg' srcset='http://1.gravatar.com/avatar/4888af57dc4c4f083841356d75a6b272?s=80&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-40 photo' height='40' width='40' />					<cite class="fn"><a href='http://schepers.cc' rel='external nofollow' class='url'>Magister</a></cite>				</span><!-- .comment-author -->
+
+				<span class="comment-metadata">
+					<a href="http://schepers.cc/authoring-accessible-svg#comment-1164">
+						<time datetime="2013-09-04T13:38:30+00:00">
+							- September 4, 2013 at 1:38 pm						</time>
+					</a>
+									</span><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Thanks, Léonie!</p>
+<p>Yes, the Web Audio API absolutely can be used for that. In fact, I made a demo for my latest talk, “Invisible Visualization” about making data visualizations accessible (so far presented at <a title="YouTube video of OpenVis Conf talk “Invisible Visualization”" href="http://www.youtube.com/watch?v=f4P6JsAKrDM" target="_blank" rel="nofollow">OpenVis Conf</a> and Open Web Camp). You can try the rough prototype here, using arrow keys (up or left for panning left, down or right for panning right across the linechart):</p>
+<p><a href="http://schepers.cc/svg/accessibility/sonifier/Sonifier.svg" rel="nofollow">http://schepers.cc/svg/accessibility/sonifier/Sonifier.svg</a></p>
+<p>Like I said, that&#8217;s just a rough prototype, but I&#8217;ll be developing it further into an open-source script library with support from Benetech.</p>
+			</div><!-- .comment-content -->
+
+					</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-1166" class="comment byuser comment-author-magister bypostauthor even thread-even depth-1">
+		<article id="div-comment-1166" class="comment-body">
+			<footer class="comment-meta">
+				<span class="comment-author vcard">
+					<img alt='' src='http://1.gravatar.com/avatar/4888af57dc4c4f083841356d75a6b272?s=40&#038;d=identicon&#038;r=pg' srcset='http://1.gravatar.com/avatar/4888af57dc4c4f083841356d75a6b272?s=80&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-40 photo' height='40' width='40' />					<cite class="fn"><a href='http://schepers.cc' rel='external nofollow' class='url'>Magister</a></cite>				</span><!-- .comment-author -->
+
+				<span class="comment-metadata">
+					<a href="http://schepers.cc/authoring-accessible-svg#comment-1166">
+						<time datetime="2013-09-05T00:22:08+00:00">
+							- September 5, 2013 at 12:22 am						</time>
+					</a>
+									</span><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p><strong>Update:</strong> I&#8217;ve just done several tests using VoiceOver, the iOS/MacOS native screenreader, and I was impressed with its treatment of SVG in Safari, Chrome, and Firefox (it didn&#8217;t work that well even in HTML in Opera, so I&#8217;m setting that aside for now):</p>
+<ul>
+<li>In all 3 browsers, it reads textual elements not only in SVG files inline in HTML, but it also reads standalone SVG just fine (though it says it&#8217;s ”HTML content”); in Safari and Chrome, it smoothly reads straight through all the text, but allows you to stop at any point and step back and forward through each textual item; on Firefox, it&#8217;s a bit less smooth, forcing you to manually advance back or forth through each textual item</li>
+<li>In each browser, again, it finds and can navigate links by stepping through them (though it still needs work on the titles for the links); in Safari and Chrome, it also exposes the link in the “Web Rotor”, in which it collects various categories of content, such as all the headings, form controls, “web spots”, tables, ”landmarks”, and, as mentioned (and the only one currently relevant to SVG) links</li>
+<li>It seems to show limited support for external SVGs referenced in &lt;iframe&gt;, &lt;object&gt;, &lt;embed&gt;, and &lt;img&gt; elements; in Safari, it skips all but the &lt;img&gt; content; in Chrome, it skips them all; in Firefox, it really shines, letting you not only step through each embedding type, but also letting you drill into the SVG content of each one, reading out titles, descriptions, and text.</li>
+</ul>
+<p>These results will help us define and refine how a screenreader should behave, but can also serve as an exemplar, raising the bar.</p>
+			</div><!-- .comment-content -->
+
+					</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-1264" class="comment odd alt thread-odd thread-alt depth-1">
+		<article id="div-comment-1264" class="comment-body">
+			<footer class="comment-meta">
+				<span class="comment-author vcard">
+					<img alt='' src='http://0.gravatar.com/avatar/c37314f8db58c44d9b59b74dc2705596?s=40&#038;d=identicon&#038;r=pg' srcset='http://0.gravatar.com/avatar/c37314f8db58c44d9b59b74dc2705596?s=80&#038;d=identicon&#038;r=pg 2x' class='avatar avatar-40 photo' height='40' width='40' />					<cite class="fn"><a href='http://tink.co.uk/' rel='external nofollow' class='url'>Léonie Watson</a></cite>				</span><!-- .comment-author -->
+
+				<span class="comment-metadata">
+					<a href="http://schepers.cc/authoring-accessible-svg#comment-1264">
+						<time datetime="2013-10-02T06:48:14+00:00">
+							- October 2, 2013 at 6:48 am						</time>
+					</a>
+									</span><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>A quick and dirty check using your bar chart example&#8230;</p>
+<p>Jaws 14, Jaws 15 and NVDA 2013.2 all read the contents of the text elements in Firefox 25.</p>
+<p>In Internet Explorer 10, Jaws 14 and Jaws 15 behave as though the page were empty. NVDA 2013.2 reports &#8220;Bar chart graphic&#8221;, but does not read any of the text content.</p>
+			</div><!-- .comment-content -->
+
+					</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+	
+			<p class="no-comments">Comments are closed.</p>
+	
+	
+</div><!-- #comments -->
+
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+<div id="secondary" class="widget-area offset-by-one five columns" role="complementary">
+	<aside id="search-4" class="widget widget_search"><h3 class="widget-title">Search</h3><form role="search" method="get" class="search-form" action="http://schepers.cc/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form></aside><aside id="archives-4" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
+			<li><a href='http://schepers.cc/2017/08'>August 2017</a>&nbsp;(1)</li>
+	<li><a href='http://schepers.cc/2017/06'>June 2017</a>&nbsp;(1)</li>
+	<li><a href='http://schepers.cc/2017/03'>March 2017</a>&nbsp;(1)</li>
+	<li><a href='http://schepers.cc/2017/01'>January 2017</a>&nbsp;(1)</li>
+	<li><a href='http://schepers.cc/2016/12'>December 2016</a>&nbsp;(1)</li>
+	<li><a href='http://schepers.cc/2016/11'>November 2016</a>&nbsp;(3)</li>
+	<li><a href='http://schepers.cc/2016/08'>August 2016</a>&nbsp;(2)</li>
+	<li><a href='http://schepers.cc/2016/02'>February 2016</a>&nbsp;(1)</li>
+	<li><a href='http://schepers.cc/2015/08'>August 2015</a>&nbsp;(3)</li>
+	<li><a href='http://schepers.cc/2014/07'>July 2014</a>&nbsp;(2)</li>
+	<li><a href='http://schepers.cc/2014/04'>April 2014</a>&nbsp;(20)</li>
+	<li><a href='http://schepers.cc/2014/03'>March 2014</a>&nbsp;(36)</li>
+	<li><a href='http://schepers.cc/2014/02'>February 2014</a>&nbsp;(8)</li>
+	<li><a href='http://schepers.cc/2013/09'>September 2013</a>&nbsp;(1)</li>
+	<li><a href='http://schepers.cc/2013/05'>May 2013</a>&nbsp;(1)</li>
+	<li><a href='http://schepers.cc/2012/07'>July 2012</a>&nbsp;(1)</li>
+	<li><a href='http://schepers.cc/2011/10'>October 2011</a>&nbsp;(1)</li>
+	<li><a href='http://schepers.cc/2011/08'>August 2011</a>&nbsp;(2)</li>
+	<li><a href='http://schepers.cc/2011/06'>June 2011</a>&nbsp;(2)</li>
+	<li><a href='http://schepers.cc/2011/02'>February 2011</a>&nbsp;(1)</li>
+	<li><a href='http://schepers.cc/2011/01'>January 2011</a>&nbsp;(2)</li>
+	<li><a href='http://schepers.cc/2010/11'>November 2010</a>&nbsp;(2)</li>
+	<li><a href='http://schepers.cc/2010/10'>October 2010</a>&nbsp;(2)</li>
+	<li><a href='http://schepers.cc/2010/08'>August 2010</a>&nbsp;(4)</li>
+	<li><a href='http://schepers.cc/2010/07'>July 2010</a>&nbsp;(3)</li>
+	<li><a href='http://schepers.cc/2010/05'>May 2010</a>&nbsp;(2)</li>
+	<li><a href='http://schepers.cc/2010/03'>March 2010</a>&nbsp;(3)</li>
+	<li><a href='http://schepers.cc/2009/07'>July 2009</a>&nbsp;(1)</li>
+	<li><a href='http://schepers.cc/2009/06'>June 2009</a>&nbsp;(1)</li>
+	<li><a href='http://schepers.cc/2009/05'>May 2009</a>&nbsp;(1)</li>
+	<li><a href='http://schepers.cc/2009/03'>March 2009</a>&nbsp;(2)</li>
+	<li><a href='http://schepers.cc/2009/01'>January 2009</a>&nbsp;(4)</li>
+	<li><a href='http://schepers.cc/2008/11'>November 2008</a>&nbsp;(1)</li>
+	<li><a href='http://schepers.cc/2008/10'>October 2008</a>&nbsp;(1)</li>
+	<li><a href='http://schepers.cc/2008/09'>September 2008</a>&nbsp;(3)</li>
+	<li><a href='http://schepers.cc/2008/05'>May 2008</a>&nbsp;(3)</li>
+	<li><a href='http://schepers.cc/2008/04'>April 2008</a>&nbsp;(6)</li>
+	<li><a href='http://schepers.cc/2008/02'>February 2008</a>&nbsp;(2)</li>
+	<li><a href='http://schepers.cc/2008/01'>January 2008</a>&nbsp;(5)</li>
+	<li><a href='http://schepers.cc/2007/11'>November 2007</a>&nbsp;(1)</li>
+	<li><a href='http://schepers.cc/2007/10'>October 2007</a>&nbsp;(2)</li>
+	<li><a href='http://schepers.cc/2007/09'>September 2007</a>&nbsp;(2)</li>
+	<li><a href='http://schepers.cc/2007/08'>August 2007</a>&nbsp;(2)</li>
+	<li><a href='http://schepers.cc/2007/07'>July 2007</a>&nbsp;(1)</li>
+	<li><a href='http://schepers.cc/2007/06'>June 2007</a>&nbsp;(4)</li>
+	<li><a href='http://schepers.cc/2007/05'>May 2007</a>&nbsp;(3)</li>
+	<li><a href='http://schepers.cc/2007/04'>April 2007</a>&nbsp;(1)</li>
+	<li><a href='http://schepers.cc/2007/03'>March 2007</a>&nbsp;(5)</li>
+	<li><a href='http://schepers.cc/2007/01'>January 2007</a>&nbsp;(6)</li>
+	<li><a href='http://schepers.cc/2006/12'>December 2006</a>&nbsp;(4)</li>
+	<li><a href='http://schepers.cc/2006/11'>November 2006</a>&nbsp;(3)</li>
+	<li><a href='http://schepers.cc/2006/10'>October 2006</a>&nbsp;(2)</li>
+	<li><a href='http://schepers.cc/2006/09'>September 2006</a>&nbsp;(5)</li>
+		</ul>
+		</aside><aside id="categories-392031563" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-3"><a href="http://schepers.cc/category/accessibility" >Accessibility</a> (6)
+</li>
+	<li class="cat-item cat-item-52"><a href="http://schepers.cc/category/annotation" >Annotation</a> (3)
+</li>
+	<li class="cat-item cat-item-31"><a href="http://schepers.cc/category/atheism" >Atheism</a> (1)
+</li>
+	<li class="cat-item cat-item-27"><a href="http://schepers.cc/category/audio" >Audio</a> (3)
+</li>
+	<li class="cat-item cat-item-26"><a href="http://schepers.cc/category/authoring-tools" >Authoring Tools</a> (2)
+</li>
+	<li class="cat-item cat-item-4"><a href="http://schepers.cc/category/browsers" >Browsers</a> (13)
+</li>
+	<li class="cat-item cat-item-150"><a href="http://schepers.cc/category/cancer" >Cancer</a> (1)
+</li>
+	<li class="cat-item cat-item-38"><a href="http://schepers.cc/category/canvas" >Canvas</a> (1)
+</li>
+	<li class="cat-item cat-item-5"><a href="http://schepers.cc/category/cdf" >CDF</a> (6)
+</li>
+	<li class="cat-item cat-item-39"><a href="http://schepers.cc/category/code" >Code</a> (1)
+</li>
+	<li class="cat-item cat-item-6"><a href="http://schepers.cc/category/comics" >comics</a> (1)
+</li>
+	<li class="cat-item cat-item-7"><a href="http://schepers.cc/category/conferences" >Conferences</a> (9)
+</li>
+	<li class="cat-item cat-item-152"><a href="http://schepers.cc/category/data" >data</a> (1)
+</li>
+	<li class="cat-item cat-item-153"><a href="http://schepers.cc/category/dataviz" >dataviz</a> (1)
+</li>
+	<li class="cat-item cat-item-40"><a href="http://schepers.cc/category/email" >Email</a> (1)
+</li>
+	<li class="cat-item cat-item-42"><a href="http://schepers.cc/category/fonts" >Fonts</a> (1)
+</li>
+	<li class="cat-item cat-item-55"><a href="http://schepers.cc/category/future" >Future</a> (2)
+</li>
+	<li class="cat-item cat-item-32"><a href="http://schepers.cc/category/games" >Games</a> (1)
+</li>
+	<li class="cat-item cat-item-35"><a href="http://schepers.cc/category/html5" >HTML5</a> (3)
+</li>
+	<li class="cat-item cat-item-37"><a href="http://schepers.cc/category/logo" >Logo</a> (2)
+</li>
+	<li class="cat-item cat-item-30"><a href="http://schepers.cc/category/maps" >Maps</a> (2)
+</li>
+	<li class="cat-item cat-item-8"><a href="http://schepers.cc/category/meta" >Meta</a> (9)
+</li>
+	<li class="cat-item cat-item-9"><a href="http://schepers.cc/category/metadata" >Metadata</a> (6)
+</li>
+	<li class="cat-item cat-item-10"><a href="http://schepers.cc/category/microformats" >Microformats</a> (3)
+</li>
+	<li class="cat-item cat-item-53"><a href="http://schepers.cc/category/mobile" >Mobile</a> (1)
+</li>
+	<li class="cat-item cat-item-58"><a href="http://schepers.cc/category/music" >Music</a> (1)
+</li>
+	<li class="cat-item cat-item-151"><a href="http://schepers.cc/category/north-carolina" >North Carolina</a> (2)
+</li>
+	<li class="cat-item cat-item-57"><a href="http://schepers.cc/category/openness" >Openness</a> (1)
+</li>
+	<li class="cat-item cat-item-11"><a href="http://schepers.cc/category/parties" >Parties</a> (3)
+</li>
+	<li class="cat-item cat-item-41"><a href="http://schepers.cc/category/philosophy" >Philosophy</a> (1)
+</li>
+	<li class="cat-item cat-item-56"><a href="http://schepers.cc/category/policy" >Policy</a> (1)
+</li>
+	<li class="cat-item cat-item-12"><a href="http://schepers.cc/category/politics" >Politics</a> (12)
+</li>
+	<li class="cat-item cat-item-13"><a href="http://schepers.cc/category/real-life" >Real Life</a> (46)
+</li>
+	<li class="cat-item cat-item-34"><a href="http://schepers.cc/category/search-engines" >Search Engines</a> (3)
+</li>
+	<li class="cat-item cat-item-14"><a href="http://schepers.cc/category/semantics" >Semantics</a> (3)
+</li>
+	<li class="cat-item cat-item-59"><a href="http://schepers.cc/category/society" >Society</a> (2)
+</li>
+	<li class="cat-item cat-item-15"><a href="http://schepers.cc/category/standards" >Standards</a> (28)
+</li>
+	<li class="cat-item cat-item-16"><a href="http://schepers.cc/category/svg" >SVG</a> (33)
+</li>
+	<li class="cat-item cat-item-28"><a href="http://schepers.cc/category/svg-2" >SVG 2</a> (3)
+</li>
+	<li class="cat-item cat-item-17"><a href="http://schepers.cc/category/svg-basics" >SVG Basics</a> (6)
+</li>
+	<li class="cat-item cat-item-18"><a href="http://schepers.cc/category/tech" >Tech</a> (14)
+</li>
+	<li class="cat-item cat-item-19"><a href="http://schepers.cc/category/technical" >Technical</a> (27)
+</li>
+	<li class="cat-item cat-item-43"><a href="http://schepers.cc/category/text" >Text</a> (1)
+</li>
+	<li class="cat-item cat-item-36"><a href="http://schepers.cc/category/touchtablet" >TouchTablet</a> (2)
+</li>
+	<li class="cat-item cat-item-20"><a href="http://schepers.cc/category/travel" >Travel</a> (37)
+</li>
+	<li class="cat-item cat-item-139"><a href="http://schepers.cc/category/tweets" >Tweets</a> (30)
+</li>
+	<li class="cat-item cat-item-1"><a href="http://schepers.cc/category/uncategorized" >Uncategorized</a> (3)
+</li>
+	<li class="cat-item cat-item-21"><a href="http://schepers.cc/category/video" >Video</a> (1)
+</li>
+	<li class="cat-item cat-item-22"><a href="http://schepers.cc/category/w3c" >W3C</a> (38)
+</li>
+	<li class="cat-item cat-item-54"><a href="http://schepers.cc/category/web" >Web</a> (2)
+</li>
+	<li class="cat-item cat-item-23"><a href="http://schepers.cc/category/webapi" >WebAPI</a> (1)
+</li>
+	<li class="cat-item cat-item-29"><a href="http://schepers.cc/category/website" >Website</a> (2)
+</li>
+	<li class="cat-item cat-item-24"><a href="http://schepers.cc/category/work" >Work</a> (40)
+</li>
+		</ul>
+</aside><aside id="meta-4" class="widget widget_meta"><h3 class="widget-title">Login</h3>			<ul>
+						<li><a href="http://schepers.cc/wp-login.php">Log in</a></li>
+			<li><a href="http://schepers.cc/feed">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://schepers.cc/comments/feed">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+			</aside></div><!-- #secondary -->
+
+	</div><!-- #content -->
+</div>
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+			<div class="footer-bottom">
+			<div class="container">
+				<div class="sixteen columns">
+					<div class="site-info">
+						Proudly powered by <a href="http://wordpress.org">WordPress</a>		<span class="sep"> | </span>
+		Theme: FlatOn by <a href="http://www.webulousthemes.com/" rel="designer">Webulous Themes</a>					</div><!-- .site-info -->
+				</div>
+			</div>
+		</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript' src='http://schepers.cc/wp-content/themes/flaton/js/navigation.js?ver=20120206'></script>
+<script type='text/javascript' src='http://schepers.cc/wp-content/themes/flaton/js/skip-link-focus-fix.js?ver=20130115'></script>
+<script type='text/javascript' src='http://schepers.cc/wp-content/themes/flaton/js/jquery.flexslider-min.js?ver=2.2.2'></script>
+<script type='text/javascript' src='http://schepers.cc/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://schepers.cc/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://schepers.cc/wp-includes/js/jquery/ui/tabs.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://schepers.cc/wp-content/themes/flaton/js/custom.js?ver=1.0'></script>
+<script type='text/javascript' src='http://schepers.cc/wp-includes/js/wp-embed.min.js?ver=4.9.3'></script>
+<!--stats_footer_test--><script src="http://stats.wordpress.com/e-201818.js" type="text/javascript"></script>
+<script type="text/javascript">
+st_go({blog:'15087531',v:'ext',post:'583'});
+var load_cmc = function(){linktracker_init(15087531,583,2);};
+if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+else load_cmc();
+</script>
+
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.399 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2018-05-06 15:39:57 -->
+
+<!-- super cache -->
