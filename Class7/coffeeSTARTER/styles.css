@@ -11,13 +11,18 @@ body{
 }
 h2{
 	font-family: 'Open Sans', sans-serif;
+	font-size: 2.5em;
+	font-weight: 10;
+	padding-left: 10px;
+	text-align: left;
 }
 img{
-	width: calc((96%/3) - 20px);
-	padding-right: 20px;
+	/*width: calc((96%/3) - 20px);*/
+	/*padding-right: 20px;*/
 	margin: 0;
-	float: left;
-	padding-bottom: 20px;
+	/*float: left;*/
+	/*padding-bottom: 20px;*/
+	width: 100%;
 }
 ul{
 	padding: 0;
@@ -26,33 +31,114 @@ ul{
 
 }
 .wrapper{
-	margin: 2% 2%;
+	margin-top: 5%;
 	width: 1100px;
+	height: 100%;
 }
 figure{
+	padding: 10px;
+	margin: 0;
+	display: block;
+	width: 100%;
+}
+
+figure:hover .overlay {
+	background: linear-gradient(to bottom right, lightgray 50%, transparent 50%); 
+	opacity: 0.5;
+}
+
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
 	padding: 0;
 	margin: 0;
-	
+    /*display: none;*/
 }
+
+.figurediv {
+	margin: 0;
+	float: left;
+	width: 33%;
+
+}
+.img-container{
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+.text {
+  /*background-color: #4CAF50;*/
+  color: black;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+figure:hover text{
+	display: block;
+}
+.icons{
+	margin-right: 50%;
+	/*margin-left: 10%*/
+	padding: 0;
+}
+
 .tweeter{
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    border: 1px solid black
-    background-image: url(https://hackeryou.slack.com/files/U7GTX84MQ/FAK8K9U9K/facebook-logo.png);
+    /*border: 1px solid black;*/
+    background-image: url(assets/twitter2.png);
     background-repeat: no-repeat;
     background-position: 5% center;
     background-size: 16px 16px;
     padding: 20px 30px;
     /*background-color: #3B5998;*/
-    /*margin-left: 5%;*/
+    margin-left: 5%;
     text-align: center;
 }
-/*li {
-	text-decoration: none;
-	padding: 0;
-	margin: 0;
-
-}*/
+.facebook{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    /*border: 1px solid black;*/
+    background-image: url(assets/facebook.png);
+    background-repeat: no-repeat;
+    background-position: 5% center;
+    background-size: 16px 16px;
+    padding: 20px 30px;
+    /*background-color: #3B5998;*/
+    margin-left: 5%;
+    text-align: center;
+}
+.linkedin{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    /*border: 1px solid black;*/
+    background-image: url(assets/linkedin.png);
+    background-repeat: no-repeat;
+    background-position: 5% center;
+    background-size: 16px 16px;
+    padding: 20px 30px;
+    /*background-color: #3B5998;*/
+    margin-left: 5%;
+    text-align: center;
+}
+.instagram{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    /*border: 1px solid black;*/
+    background-image: url(assets/instagram.png);
+    background-repeat: no-repeat;
+    background-position: 5% center;
+    background-size: 16px 16px;
+    padding: 20px 30px;
+    /*background-color: #3B5998;*/
+    margin-left: 5%;
+    text-align: center;
+}
 
 
