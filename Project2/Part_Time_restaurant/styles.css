@@ -106,9 +106,70 @@ li a{
 
 /* BODY */
 
+body{
+	margin: 0;
+	padding: 0;
+}
 .chefIntro{
 	float: left;
+	background-color: #EBE5D7;
+	flex: 1;
 }
-.chefPic{
+.chefPadding {
+	padding: 10%;
+	padding-left: 20%;
+}
+.chefBlock {
+	display: flex;
+}
+.image1 img{
+	width: 100px;
+	height: 100px;
+	filter: grayscale(100%);
+	/*float: left;*/
+}
+.image1{
+	border-radius: 50%;
+	float: left;
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+}
+.gallery {
+	text-align: center;
+	background-color: black;
+	padding: 4%;
+	margin: 0;
+	color: white;
+}
+.image2{
+	/*float: left;*/
+}
+.chefPic {
+	flex: 1;
+	float: left;
+	/* max-width: 100%; 
+    height: auto; */
+}
+
+.chefPic img {
+	width: 100%;
+}
+
+.menuImages{
+	float: left;
+	width: 100%;
+}
+.menuImages img{
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 20%;
+}
+/*img:nth-of-type(5n){
+	margin-right: 0;
+}*/
+
+.button ul li {
 	float: left;
 }
