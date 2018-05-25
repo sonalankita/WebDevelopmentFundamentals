@@ -240,14 +240,14 @@ figure figcaption h4 {
 	margin: 0;
 	padding: 0;
 	padding-bottom: 2%;
-		background-color: #F6F7F9;
+	background-color: #F6F7F9;
 
 }
 
 .bottom_right_column_recent {
 	margin: 0;
 	padding: 0;
-		background-color: #F6F7F9;
+	background-color: #F6F7F9;
 
 }
 
@@ -257,4 +257,34 @@ footer {
 	margin: 0;
 	padding: 0; 
 }
+.page_link {
+	margin-left: 20%;
+}
+.page_link ul {
+	list-style-type: none;
+	float: left;
+	padding: 0;
 
+}
+.page_link li{
+	padding: 3px;
+}
+.page_link a:hover {
+	/*display: block;*/
+	background-color: #aaaaaa;
+}
+
+.page_link ul li a {
+	text-decoration: none;
+	background-color: #F6F7F9;
+	color: black;
+	height: 35px;
+	width: 35px;
+	padding: 8px;
+	border: 1px solid #F6F7F9;
+	border-radius: 50%;
+	display: inline-block;
+	text-align: center;
+	font-weight: bolder;
+	 -moz-border-radius: 50%;
+}
