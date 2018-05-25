@@ -82,7 +82,7 @@ main{
 	margin: 0;
 }
 
-.figureSet1 {
+.figure_set1 {
 	width: 100%;
 	margin: 0;
 	display: flex;	
@@ -152,7 +152,7 @@ figure figcaption h4 {
 	margin: 0;
 }
 
-.figureSet1 figcaption {
+.figure_set1 figcaption {
 	background-color: #FFFFFF;
 	padding: 5%;
 	padding-top: 10%;
@@ -160,17 +160,17 @@ figure figcaption h4 {
 	overflow-y: auto;
 }
 
-.figureSet1 figcaption p {
+.figure_set1 figcaption p {
 	text-align: left;
 }
 
-.figureSet1 figcaption div p {
+.figure_set1 figcaption div p {
 	padding: 0;
 	margin: 0;
 	text-align: center;
 }
 
-.figureSet1 figcaption a{
+.figure_set1 figcaption a{
 	color: red;	
 	text-decoration: none;
 	text-transform: uppercase;
@@ -214,8 +214,27 @@ figure figcaption h4 {
 .audience {
 	width: 100%;
 	margin-top: -100px; 
+	margin-bottom: -18%;
 }
 
+.imgfour {
+	flex: 1;
+	width: 160%;
+	margin-left: -45%;
+	margin-bottom: -20%;
+}
+.imgfive {
+	flex: 1;
+	width: 151%;
+	margin-left: -20%;
+	margin-bottom: -10%;
+}
+.imgsix{
+	flex: 1;
+	width: 120%;
+	margin-left: -13%;
+	margin-right: -100%;
+}
 .bottom_left_column_bottom_row figure{
 	float: left;
 	width: 50%;
@@ -234,6 +253,9 @@ figure figcaption h4 {
 	padding: 0;
 	padding-bottom: 2%;	
 }
+/*.bottom_right_column_about img{
+	width: 100%;
+}*/
 
 
 .bottom_right_column_email {
