@@ -225,6 +225,7 @@ figcaption div p {
 	font-family: 'Noto Serif', serif;
 	font-style: italic;
 	font-size: 14px;
+	margin: 5px 0 0 20px;
 }
 
 figcaption a {
@@ -236,7 +237,6 @@ figcaption a {
 }
 
 .section2 {
-	padding-top: 2%;
 	text-align: center;
 }
 
@@ -244,12 +244,15 @@ figcaption a {
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: bold;
+	padding: 3% 0 0 0;
+	margin: 0;
 }
 
 .bottom_enclouser {
 	width: 100%;
-	padding: 5% 5% 10% 5%;
+	padding: 2% 5% 10% 5%;
 }
+
 
 .bottom_left_column {
 	width: 66.66%;
@@ -299,10 +302,11 @@ figcaption a {
 	margin-left: -13%;
 	margin-right: -100%;
 }
-.bottom_left_column_bottom_row figure{
+
+.bottom_left_column_bottom_row figure {
 	float: left;
-	width: 50%;
-	padding: 1% 1%;
+	width: 49.5%;
+	padding: 0;
 }
 
 .bottom_left_column_bottom_row figure figcaption {
@@ -334,8 +338,14 @@ figcaption a {
 	background-color: #F6F7F9;
 }
 .bottom_left_column_bottom_row {
-	padding: 0;
+	padding: 1% 0 0 0;
 	margin: 0;
+}
+
+.spacer {
+	width: 1%;
+	height: 10px;
+	float: left;
 }
 
 h4 {
@@ -427,6 +437,7 @@ p{
 	height: 40px;
 	width: 40px;	
 	margin-right: 10px; 
+	margin-bottom: 10px; 
 	position: relative;
 }
 
@@ -462,13 +473,18 @@ footer {
 
 .footer_text1 {
 	float: left;
-	width: 30%;
+	width: 35%;
 	color: white;
 	/*text-align: left;*/
 }
 
 .footer_links {
+	width: 15%;
 	float: left;
+}
+
+.footer_links ul {
+	padding: 0;
 }
 
 .footer_links li{
@@ -489,7 +505,6 @@ footer {
 	width: 50%;
 	color: white;
 	margin: 0;
-	margin-left: 3%;
 	padding: 0;
 	/*text-align: left;*/
 }
@@ -517,8 +532,9 @@ footer {
 	font-style: italic;
 	font-weight: bold;
 	/*font-size: 20px;*/
-	width: 70%;
 	overflow: hidden;
+	margin-bottom: 5px;
+	width: 70%;
 }
 
 .footer_button button{
@@ -528,7 +544,6 @@ footer {
 	text-transform: uppercase;
 	border: none;
 	/*opacity: 0.5;*/
-	width: 27%;
 	overflow: hidden;
 }
 
