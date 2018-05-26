@@ -405,20 +405,20 @@ p{
 }
 
 .page_link {
-	margin:0;
+	margin: 5% 0 0 0;
 	padding: 0;
 	/*position: absolute;
 	top: 100%;
 	left: 50%;
 	transform: translate(-50%, 0%);*/
+	position: relative;
 	text-align: center;
 }
 
 .page_link ul {
 	padding: 0;
-	margin: 5% auto 0 auto;
-	width: 50%;
-	display: inline-block;
+	margin: auto;
+	width: calc( 6 * 50px - 10px );
 }
 
 .page_link ul li label:hover {
@@ -446,6 +446,10 @@ p{
 	width: 40px;	
 	margin-right: 10px; 
 	position: relative;
+}
+
+.page_link li:last-child {
+	margin-right: 0px; 
 }
 
 .page_link ul li label {
