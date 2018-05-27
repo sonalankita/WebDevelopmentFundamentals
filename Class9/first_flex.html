@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flex</title>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		.flexContainer {
+		    border: #333 solid 2px;
+		    height: 300px;
+		    display: flex;
+		    /*parent will not collapse now. But it will give the height that is required*/
+		    /*here the main axis is x axis and the other axis is vertical that is y*/
+		    /*flex-direction: by default it is row*/
+		    /*flex-direction: row-reverse;*/
+		    /*flex-direction: column;*/
+		    /*justify-content: flex-end;*/
+		    /*justify-content: space-between;*/
+		    /*justify-content: space-around;*/
+		    /*justify-content: center;*/
+		    /*align-items: flex-end;*/
+		    /*align-items: center;*/
+		    /*justify-content: space-evenly; not supported it on windows*/
+		    /*flex-wrap: wrap;*/
+
+		    flex-wrap: wrap;
+		}
+
+		.flexItem {
+		    width: 50px;
+		    height: 50px;
+		    background: #D12026;
+		    border: #333 solid 1px;
+		    margin: 5px;
+		    flex-grow: 1;
+		    flex-basis: 300px;
+
+		    /*margin: auto;*/
+		    /*float: left;*/
+		}
+
+		.flexItem:first-child {
+		    background: #26A6C9;
+		    /*order: 1;*/
+		}
+/*
+		.flexItem:last-child {
+			order: -1;
+			background: pink; 
+			flex-grow: 2;
+			flex-basis: 150px;
+		}
+*/
+	</style>
+</head>
+<body>
+	<div class="flexContainer">
+		<div class="flexItem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum esse autem, non rem facilis nobis eius alias sapiente omnis, soluta quidem commodi. Sequi libero possimus, accusamus! Incidunt omnis, dolorem reprehenderit!50</div>
+		<div class="flexItem">2</div>
+		<div class="flexItem">3</div>
+		<div class="flexItem">4</div>
+		<div class="flexItem">5</div>
+		<div class="flexItem">6</div>
+		<div class="flexItem">7</div>
+</body>
+</html>
