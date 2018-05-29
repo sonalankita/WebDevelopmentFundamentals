@@ -233,7 +233,6 @@ figcaption {
 	background-color: #FFFFFF;
 	padding: 5%;
 	padding-top: 10%;
-	max-height: 50%;
 	overflow-y: auto;
 }
 
@@ -331,7 +330,7 @@ h4 {
 	margin-bottom: -10%;
 }
 .imgsix {
-	width: 138%;
+	width: 125%;
 	margin-left: -13%;
 	margin-right: -100%;
 }
@@ -456,6 +455,10 @@ h4 {
 
 }
 
+.bottom_right_column_email input {
+	border: 1px solid gray;
+}
+
 .bottom_right_column_recent a {
 	text-decoration: none;
 	color: black;
@@ -468,12 +471,18 @@ h4 {
 	padding: 5% 2%;
 }
 
+.bottom_right_column_email_recent {
+	margin: 0;
+	padding: 0; 
+}
+
 .bottom_right_column_recent li {
 	text-align: left;
 	padding: 5px;
 }
 
 .bottom_right_column_recent ul {
+	padding: 2% 4%;
 	list-style-position: inside;
 }
 
@@ -627,19 +636,38 @@ button:hover {
 }
 
 @media (max-width: 940px) {
-}
- 
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) {
-	h1 {
-		text-transform: uppercase;
+	.bottom_left_column {
+		width: 100%;
+	}
+
+	.bottom_left_column_bottom_row figure {
+		width: 49%;
+		padding: 0;
+	}
+
+	.bottom_right_column {
+		width: 100%;
+		padding-top: 50px;
+	}
+
+	.bottom_right_column_about {
+		float: left;
+		width: 49%;
+	}
+
+	.bottom_right_column_email_recent {
+		width: 49%;
+		float: left;
+	}
+
+	.bottom_right_column_email {
 		margin: 0;
-		font-family: 'Raleway', sans-serif;
-		font-weight: 200; 
+		padding: 0;
+		padding-bottom: 2%;
+		padding-top: 0%;
 	}
 }
- 
-/* Landscape phones and down */
+
 @media (max-width: 480px) {
 	.menu {
 		padding-top: 1%;
@@ -647,6 +675,17 @@ button:hover {
 		padding-left: 5%;
 		padding-right: 5%;
 		text-align: center;
+	}
+
+	h2 {
+		float: none;
+	}
+
+	.menu ul {
+		display: flex;
+		float: none;
+		margin: auto;
+		justify-content: center;
 	}
 
 	.menu ul a {
@@ -664,6 +703,7 @@ button:hover {
 		margin: 0;
 		padding: 0;
 		display: block;	
+		padding-top: 20px;
 	}
 
 	.menu ul a:hover {
@@ -684,7 +724,7 @@ button:hover {
 		margin: 0;
 		font-family: 'Raleway', sans-serif;
 		font-size: 20px;
-		font-weight: 600;
+		font-weight: 800;
 	}
 
 	.background {
@@ -720,8 +760,8 @@ button:hover {
 	.background-img {
 		position: absolute;
 		width: 1000px;
-		margin-top: -200px;
-		margin-left: -100px;
+		margin-top: -300px;
+		margin-left: -120px;
 	}
 
 	.bottom_left_column {
@@ -736,10 +776,6 @@ button:hover {
 	.bottom_right_column {
 		width: 100%;
 		padding-top: 50px;
-	}
-
-	.bottom_right_column_recent ul {
-		padding: 2% 2%;
 	}
 
 	.footer_text1 {
@@ -762,6 +798,16 @@ button:hover {
 		list-style-type: none;
 		padding: 5px;
 		float: left;
+	}
+
+	.bottom_right_column_about {
+		float: none;
+		width: 100%;
+	}
+
+	.bottom_right_column_email_recent {
+		width: 100%;
+		float: none;
 	}
 }
 
