@@ -631,9 +631,9 @@ button:hover {
 	color: white;
 }
 
+
 /* Portrait tablet and small desktops */
-@media (max-width: 1080px) {
-}
+
 
 @media (max-width: 940px) {
 	.bottom_left_column {
