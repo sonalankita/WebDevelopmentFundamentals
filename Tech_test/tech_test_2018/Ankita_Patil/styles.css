@@ -811,3 +811,45 @@ button:hover {
 	}
 }
 
+@media (max-width: 767px) {
+	.menu {
+		padding-top: 1%;
+		padding-bottom: 1%;
+		padding-left: 5%;
+		padding-right: 5%;
+		text-align: center;
+	}
+
+	h2 {
+		float: none;
+	}
+
+	.menu ul {
+		display: flex;
+		float: none;
+		margin: auto;
+		justify-content: center;
+	}
+
+	.footer_text1 {
+		width: 100%;
+		color: white;
+	}
+
+	.footer_links {
+		width: 100%;
+	}
+
+	.footer_text2 {
+		width: 100%;
+		color: white;
+		margin: 0;
+		padding: 0;
+	}
+
+	.footer_links li{
+		list-style-type: none;
+		padding: 5px;
+		float: left;
+	}
+}
