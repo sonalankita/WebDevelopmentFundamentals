@@ -622,5 +622,140 @@ button:hover {
 	color: white;
 }
 
+/* Portrait tablet and small desktops */
+@media (max-width: 1080px) {
+}
 
+@media (max-width: 940px) {
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	h1 {
+		text-transform: uppercase;
+		margin: 0;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 200; 
+	}
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.menu {
+		text-transform: uppercase;
+		padding-top: 1%;
+		padding-bottom: 1%;
+		padding-left: 5%;
+		padding-right: 5%;
+		text-align: center;
+	}
+
+	.menu ul a {
+		display: inline-block;
+		text-decoration: none;
+		color: black;
+		font-family: 'Raleway:600', sans-serif;
+		font-weight: 700;
+		padding: 4px;
+		font-size: 10px;
+	}
+
+	.menu ul a:hover {
+		font-weight: 900;
+		padding: 4px;
+	}
+
+	h2 {
+		padding: 10px;
+		margin: 0;
+		font-family: 'Raleway:600', sans-serif;
+		text-align: center;
+		width: 100%;
+	}
+
+	h1 {
+		text-transform: uppercase;
+		margin: 0;
+		font-family: 'Raleway', sans-serif;
+		font-size: 20px;
+		font-weight: 600;
+	}
+
+	.background {
+		width: 100%;
+		height: 400px;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.background div p:nth-child(3) {
+		font-family: 'Raleway:600', sans-serif;
+		font-size: 14px;
+		margin: 5px;
+	}
+
+	.section1 figure{
+		width: 100%;
+		padding: 1% 1%;
+	}
+
+	.overl {
+		background-color: white;
+		position: relative;
+		opacity: 0.7;
+		width: 80%;
+		padding: 4% 4% 2% 4%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+	}
+
+	.background-img {
+		position: absolute;
+		width: 1000px;
+		margin-top: -200px;
+		margin-left: -100px;
+	}
+
+	.bottom_left_column {
+		width: 100%;
+	}
+
+	.bottom_left_column_bottom_row figure {
+		width: 100%;
+		padding: 0;
+	}
+
+	.bottom_right_column {
+		width: 100%;
+		padding-top: 50px;
+	}
+
+	.bottom_right_column_recent ul {
+		padding: 2% 2%;
+	}
+
+	.footer_text1 {
+		width: 100%;
+		color: white;
+	}
+
+	.footer_links {
+		width: 100%;
+	}
+
+	.footer_text2 {
+		width: 100%;
+		color: white;
+		margin: 0;
+		padding: 0;
+	}
+
+	.footer_links li{
+		list-style-type: none;
+		padding: 5px;
+		float: left;
+	}
+}
 
