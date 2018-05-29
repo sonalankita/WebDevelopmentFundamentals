@@ -165,7 +165,6 @@ body{
 }
 
 .menuImages{
-	float: left;
 	width: 100%;
 }
 .menuImages img{
@@ -180,4 +179,24 @@ body{
 
 .button ul li {
 	float: left;
+}
+
+.menu {
+	margin-top: 5%;
+}
+
+.menu h2, p {
+	margin: 2% 20% 2% 20%; 
+	text-align: center;
+}
+
+.menu_items {
+	margin: 2% 20% 2% 20%; 
+	display: flex;
+}
+
+.menu_items figure {
+	width: calc(90% / 4);
+	justify-content: space-between;
+	margin: 10px;
 }

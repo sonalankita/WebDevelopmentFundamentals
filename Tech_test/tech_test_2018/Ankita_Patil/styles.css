@@ -45,10 +45,6 @@ h2 {
 	justify-content: space-between;
 }
 
-/*.menu ul li:nth-child(n+3) {
-	width: 120px;
-}
-*/
 .menu ul a {
 	display: inline-block;
 	text-decoration: none;
@@ -62,15 +58,6 @@ h2 {
 	font-weight: 900;
 	padding: 6px;
 }
-
-/*.menu li a::after {
-    display: block;
-    content: attr(title);
-    font-weight: bold;
-    height: 0;
-    overflow: hidden;
-    visibility: hidden;
-}*/
 
 .background {
 	width: 100%;
@@ -98,12 +85,19 @@ h2 {
 	margin-top: -200px;
 }
 
-h1{
+h1 {
 	text-transform: uppercase;
 	margin: 0;
 }
 
-.overl{
+.overl p {
+	
+	font-family: 'Raleway', sans-serif;
+	line-height: 1.6;
+	font-size: 14px;
+}
+
+.overl {
 	background-color: white;
 	position: relative;
 	opacity: 0.8;
@@ -115,6 +109,7 @@ h1{
 	text-align: center;
 }
 
+
 /*HEADER ENDS*/
 /*MAIN*/
 
@@ -124,7 +119,9 @@ main{
 	padding: 0;
 }
 
+
 /*SECTION1*/
+
 
 .section1 {
 	margin: 0;
@@ -192,25 +189,24 @@ main{
 }
 
 .imgone {
-	flex: 1;
 	width: 100%;
 	margin-top: -42%;
 }
 
 .imgtwo {
-	flex: 1;
 	width: 200%;
 	margin-left: -100%;
 	margin-top: -30%;
 }
 
 .imgthree {
-	flex: 1;
 	width: 200%;
 	margin-top: -20%;
 }
 
+
 /*SECTION 1*/
+
 
 .section1 figure{
 	float: left;
@@ -218,7 +214,9 @@ main{
 	padding: 1% 1%;
 }
 
+
 /*COMMON*/
+
 
 figure figcaption h4 {
 	padding: 0;
@@ -242,6 +240,8 @@ figcaption {
 figcaption p {
 	text-align: left;
 	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+	line-height: 1.6;
 	font-size: 14px;
 	margin: 20px;
 }
@@ -266,9 +266,12 @@ figcaption a {
 h4 {
 	text-transform: uppercase;
 	text-align: center;
+	letter-spacing: 1px;
 }
 
+
 /*SECTION 2*/
+
 
 .section2 {
 	text-align: center;
@@ -318,19 +321,16 @@ h4 {
 }
 
 .imgfour {
-	flex: 1;
 	width: 160%;
 	margin-left: -45%;
 	margin-bottom: -20%;
 }
 .imgfive {
-	flex: 1;
 	width: 151%;
 	margin-left: -20%;
 	margin-bottom: -10%;
 }
 .imgsix {
-	flex: 1;
 	width: 138%;
 	margin-left: -13%;
 	margin-right: -100%;
@@ -350,6 +350,7 @@ h4 {
 .bottom_left_column_top_row {
 	background-color: #F6F7F9;
 }
+
 .bottom_left_column_bottom_row {
 	padding: 1% 0 0 0;
 	margin: 0;
@@ -364,10 +365,6 @@ h4 {
 .page_link {
 	margin: 5% 0 0 0;
 	padding: 0;
-	/*position: absolute;
-	top: 100%;
-	left: 50%;
-	transform: translate(-50%, 0%);*/
 	position: relative;
 	text-align: center;
 }
@@ -379,7 +376,6 @@ h4 {
 }
 
 .page_link ul li label:hover {
-	/*display: block;*/
 	background-color: #aaaaaa;
 }
 
@@ -428,7 +424,9 @@ h4 {
 	font-weight: 800;
 }
 
+
 /*SIDE SECTION*/
+
 
 .bottom_right_column {
 	width: 33%;
@@ -449,10 +447,6 @@ h4 {
 	padding: 5%;
 }
 
-p {
-	/*text-align: center;*/
-}
-
 .bottom_right_column_email {
 	margin: 0;
 	padding: 0;
@@ -465,7 +459,7 @@ p {
 .bottom_right_column_recent a {
 	text-decoration: none;
 	color: black;
-	/*padding: px;*/
+	font-family: 'Raleway:600', sans-serif;
 }
 
 .bottom_right_column_recent {
@@ -474,10 +468,8 @@ p {
 	padding: 5% 2%;
 }
 
-
 .bottom_right_column_recent li {
 	text-align: left;
-	/*list-style-position: inside;*/
 	padding: 5px;
 }
 
@@ -504,11 +496,12 @@ p {
 	width: 100%;
 }
 
+
 /*FOOTER*/
+
 
 footer {
 	background-color: #444444;
-	/*height: 200px;*/
 	margin: 0;
 	padding: 0; 
 }
@@ -521,7 +514,6 @@ footer {
 	float: left;
 	width: 35%;
 	color: white;
-	/*text-align: left;*/
 }
 
 .footer_links {
@@ -542,7 +534,6 @@ footer {
 	text-decoration: none;
 	color: white;
 	text-transform: uppercase;
-
 }
 
 .footer_text2 {
@@ -569,25 +560,31 @@ footer {
 	width: 100%;
 }
 
-.footer_button input{
+.footer_button input {
 	padding: 10px;
 	font-family: 'Noto Serif', serif;
 	font-style: italic;
 	font-weight: bold;
-	/*font-size: 20px;*/
 	overflow: hidden;
 	margin-bottom: 5px;
 	width: 70%;
 }
 
-.footer_button button{
+.footer_button button {
 	padding: 15px;
 	color: white;
 	background-color: red;
 	text-transform: uppercase;
 	border: none;
-	/*opacity: 0.5;*/
 	overflow: hidden;
+}
+
+button {
+	letter-spacing: 2px;
+}
+
+button:hover {
+	background-color: darkred;
 }
 
 .footer_footer {
@@ -603,7 +600,10 @@ footer {
 .footer_footer p{
 	float: left;
 	padding: 0;
+	text-transform: uppercase;
+	font-weight: bold;
 	margin: 0;
+	font-family: 'Raleway', sans-serif;
 }
 
 .footer_footer ul {
@@ -621,5 +621,6 @@ footer {
 	padding: 5px;
 	color: white;
 }
+
 
 
