@@ -81,7 +81,7 @@ h2 {
 
 .background-img {
 	position: absolute;
-	width: 1500px;
+	width: 1600px;
 	margin-top: -200px;
 }
 
@@ -642,7 +642,6 @@ button:hover {
 /* Landscape phones and down */
 @media (max-width: 480px) {
 	.menu {
-		text-transform: uppercase;
 		padding-top: 1%;
 		padding-bottom: 1%;
 		padding-left: 5%;
@@ -658,6 +657,13 @@ button:hover {
 		font-weight: 700;
 		padding: 4px;
 		font-size: 10px;
+	}
+
+	.figure_set1 {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		display: block;	
 	}
 
 	.menu ul a:hover {
