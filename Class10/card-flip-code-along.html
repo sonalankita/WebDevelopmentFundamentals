@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Flip</title>
+  <!-- This exercise will show us how to create 3d animations. Check out The Transforms class if you want to look over the notes again! -->
+  <style type="text/css">
+    
+
+    .front, .back {
+      height: 200px;
+      width:200px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      backface-visibility: hidden;
+      transition: 0.5s all ease;
+    }
+    
+    .front {
+      background-color: green;
+
+    }
+
+     .back {
+      background-color: yellow;
+      transform: rotateY(180deg);
+      
+    }
+
+    .card {
+      position: relative;
+      perspective: 100px;
+
+
+    }
+
+    .card:hover .front {
+        transform: rotateY(-180deg);
+        
+    }
+
+    .card:hover .back {
+      transform: rotateY(0deg);
+    }
+
+  </style>
+</head>
+<body>
+	  <!-- First we need to set some default styles on our card class, then the front and back elements. Make them different colours so we can tell them a part -->
+	  <!-- We need to position the front and back on top of one another in relation to our card -->
+	  <!-- We want the back side of our card to be flipped, so let's use transform: rotateY(180deg), so that by default it's flipped -->
+	  <!-- We want both the front and back of the card to not show their backfaces when flipped, because we want to see the opposite side of the card instead. -->
+	  <!-- Next we want to create the flipping action when we hover over the whole card. To do this we need to select the front on hover of the card and apply a transform, then separately select the back of the card on hover of the card -->
+	  <!-- Our last step is to add perspective to give the card flip a 3d look. Experiment with different values. 800px should give you what you imagine. 100px will be very exaggerated. -->
+
+  <div class="card">
+    <div class="front">I'm the front!</div>
+    <div class="back">I'm the back!</div>
+  </div>
+
+</body>
+</html>

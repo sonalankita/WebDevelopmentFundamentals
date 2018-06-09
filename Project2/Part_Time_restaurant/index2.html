@@ -5,6 +5,7 @@
 	<title>Restaurant</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
 </head>
 <body>
 	<header>
@@ -12,50 +13,53 @@
 			<img src="assets/genuine.png" class="genuine clearfix">
 			<img src="assets/foodpassion.png" class="foodpassion clearfix">
 			<img src="assets/cookingsince.png" class="cooking clearfix">
-			<div class="eye clearfix>
-				<img src="assets/eye.png">
-				<p>view details</p>
+			<div class="eye clearfix">
+				<button type=""><img src="assets/eye.png"> View Details</button>
 			</div>
 		</div>
 		<div class="side-bar">
-			<img src="assets/logo.png">
+			<div class="logo">
+				<img src="assets/logo.png">
+			</div>
 			<nav class="links">
 				<ul>
 					<li>
-						<a href="#">Home</a>
+						<i class="fas fa-angle-right"></i><a href="#">Home</a>
 					</li>
 					<li>
-						<a href="#">services</a>
+						<i class="fas fa-angle-right"></i><a href="#">services</a>
 					</li>
 					<li>
-						<a href="#">projects</a>
+						<i class="fas fa-angle-right"></i><a href="#">projects</a>
 					</li>
 					<li>
-						<a href="#">about me</a>
+						<i class="fas fa-angle-right"></i><a href="#">about me</a>
 					</li>
 					<li>
-						<a href="#">blog</a>
+						<i class="fas fa-angle-right"></i><a href="#">blog</a>
 					</li>
 					<li>
-						<a href="#">contacts</a>
+						<i class="fas fa-angle-right"></i><a href="#">contacts</a>
 					</li>
 				</ul>
 			</nav>
 			<div class="general">
-				<i class="fab fa-twitter"></i>
-				<p>@louisedesign Check out</p>
-				<p>Marine Theme</p>
-				<a href="#" class="fileLink">file:///D:/Development/Project2/Part_Time_restaurant/index.html></a>
-				<p>12 minutes ago</p>
+				<p><i class="fab fa-twitter"></i></p>
+				<p><span class="orange">@louisedesign</span> <span class="gray">Check out</span></p>
+				<p class="gray">Marine Theme</p>
+				<p><a href="#" class="fileLink">http://themeforest.net/User/louisdesign/portfolio</a></p>
+				<p class="gray">12 minutes ago</p>
 			</div>
-			<div class="socialLinks">
-				<i class="fab fa-facebook-f"></i>
-				<i class="fab fa-twitter"></i>
-				<i class="fab fa-skype"></i>
-			</div>
-			<div>
-				<p>2014 The Gourmet</p>
-				<p>All Rights reserved</p>
+			<div class="side_footer">
+				<div class="socialLinks">
+					<i class="fab fa-facebook-f"></i>
+					<i class="fab fa-twitter"></i>
+					<i class="fab fa-skype"></i>
+				</div>
+				<div class="copyright">
+					<p>© 2014 The Gourmet.</p>
+					<p>All Rights reserved</p>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -63,18 +67,20 @@
 		<div class="chefBlock clearfix">
 			<div class="chefIntro clearfix">
 				<div class="chefPadding">
-					<h2>about our chef</h2>
-					<div class="image1 clearfix">
-						<img src="assets/Images/chef.jpg">
-					</div>
-					<div class="image2 clearfix">
-						<p>Gustave Berneir</p>
-						<p>Executive Chef</p>
+					<h2><span class="h2_orange">about</span> Our Chef</h2>
+					<div class="image1wrapper">
+						<div class="image1 clearfix">
+							<img src="assets/Images/chef.jpg">
+						</div>
+						<div class="image2 clearfix">
+							<p class="chef-name">Gustave Berneir</p>
+							<p class="orange">Executive Chef</p>
+						</div>
 					</div>	
-					<div class="clearfix">
-						<p>Praesent vitae arcu tempor neque lacinia pretium. Fusce suscipit libero eget elit.</p>
+					<div class="para clearfix">
+						<p><strong>Praesent vitae arcu tempor neque lacinia pretium. Fusce suscipit libero eget elit.</strong></p>
 						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Integer pellentesque quam vel velit. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui.</p>
-						<p>Nulla quis diam. In enim a arcu imperdiet malesuada. Integer in sapien. Quisque porta. Ut tempus purus at lorem. Phasellus et lorem id felis nonummy placerat. Nullam at arcu a est sollicitudin euismod.</p>
+						<!-- <p>Nulla quis diam. In enim a arcu imperdiet malesuada. Integer in sapien. Quisque porta. Ut tempus purus at lorem. Phasellus et lorem id felis nonummy placerat. Nullam at arcu a est sollicitudin euismod.</p> -->
 					</div>
 				</div>
 			</div>
@@ -83,10 +89,10 @@
 			</div>
 		</div>
 		<div class="gallery clearfix">
-			<h2>Our Gallery</h2>
+			<h2><span class="h2_orange">Our</span> Gallery</h2>
 			<p>Sed placerat erat lorem, non condimentum ex finibus quis. Mauris mollis convallis leo, ac elementum lectus ultricies a. Ut fringilla pretium ornare. Cras vitae nunc pretium, ullamcorper ipsum nec, scelerisque risus. </p>
-			<div class="button clearfix">
-				<ul>
+<!-- 			<div class="button clearfix">
+ -->				<ul>
 					<li>
 						<a href="">All</a>
 					</li>
@@ -103,22 +109,122 @@
 						<a href="">Vegetarian</a>
 					</li>
 				</ul>
-			</div>
+			<!-- </div> -->
 		</div>
 		<div class="menuImages clearfix">
-			<img src="assets/Images/photo-1426869981800-95ebf51ce900.jpeg">
-			<img src="assets/Images/photo-1432752641289-a25fc853fceb.jpeg">
-			<img src="assets/Images/photo-1485768071412-bded21c2be08.jpeg">
-			<img src="assets/Images/photo-1488992783499-418eb1f62d08.jpeg">
-			<img src="assets/Images/photo-1501688190156-9e816757373a.jpeg">
-			<img src="assets/Images/photo-1504887182320-89fabf6079c3.jpeg">
-			<img src="assets/Images/photo-1504887182320-89fabf6079c3.jpeg">
-			<img src="assets/Images/photo-1505233276084-d944dbc8f17d.jpeg">
-			<img src="assets/Images/photo-1511516260003-838c11146feb.jpeg">
-			<img src="assets/Images/photo-1514536958296-436f46226e74.jpeg">
+			<div class="enclouser">
+				<img src="assets/Images/photo-1426869981800-95ebf51ce900.jpeg">
+				<div  class="enclouserdiv">
+					<p>Project Title</p>
+					<p>Graphic Design</p>
+					<div>
+						<img src="assets/link.png">
+						<img src="assets/search.png">
+					</div>
+				</div>
+			</div>
+			<div class="enclouser">
+				<img src="assets/Images/photo-1432752641289-a25fc853fceb.jpeg">
+				<div  class="enclouserdiv">
+					<p>Project Title</p>
+					<p>Graphic Design</p>
+					<div>
+						<img src="assets/link.png">
+						<img src="assets/search.png">
+					</div>
+				</div>
+			</div>
+			<div class="enclouser">
+				<img src="assets/Images/photo-1485768071412-bded21c2be08.jpeg">
+				<div  class="enclouserdiv">
+					<p>Project Title</p>
+					<p>Graphic Design</p>
+					<div>
+						<img src="assets/link.png">
+						<img src="assets/search.png">
+					</div>
+				</div>
+			</div>
+			<div class="enclouser">
+				<img src="assets/Images/photo-1523905330026-b8bd1f5f320e.jpg">
+				<div  class="enclouserdiv">
+					<p>Project Title</p>
+					<p>Graphic Design</p>
+					<div>
+						<img src="assets/link.png">
+						<img src="assets/search.png">
+					</div>
+				</div>
+			</div>
+			<div class="enclouser">
+				<img src="assets/Images/photo-1501688190156-9e816757373a.jpeg">
+				<div  class="enclouserdiv">
+					<p>Project Title</p>
+					<p>Graphic Design</p>
+					<div>
+						<img src="assets/link.png">
+						<img src="assets/search.png">
+					</div>
+				</div>
+			</div>
+			<div class="enclouser">
+				<img src="assets/Images/photo-1506027497629-626def8ddb41.jpeg">
+				<div  class="enclouserdiv">
+					<p>Project Title</p>
+					<p>Graphic Design</p>
+					<div>
+						<img src="assets/link.png">
+						<img src="assets/search.png">
+					</div>
+				</div>
+			</div>
+			<div class="enclouser">
+				<img src="assets/Images/photo-1511516315833-9c19f0e41bf4.jpg">
+				<div  class="enclouserdiv">
+					<p>Project Title</p>
+					<p>Graphic Design</p>
+					<div>
+						<img src="assets/link.png">
+						<img src="assets/search.png">
+					</div>
+				</div>
+			</div>
+			<div class="enclouser">
+				<img src="assets/Images/photo-1505233276084-d944dbc8f17d.jpeg">
+				<div  class="enclouserdiv">
+					<p>Project Title</p>
+					<p>Graphic Design</p>
+					<div>
+						<img src="assets/link.png">
+						<img src="assets/search.png">
+					</div>
+				</div>
+			</div>
+			<div class="enclouser">
+				<img src="assets/Images/photo-1511516260003-838c11146feb.jpeg">
+				<div  class="enclouserdiv">
+					<p>Project Title</p>
+					<p>Graphic Design</p>
+					<div>
+						<img src="assets/link.png">
+						<img src="assets/search.png">
+					</div>
+				</div>
+			</div>
+			<div class="enclouser">
+				<img src="assets/Images/photo-1514536958296-436f46226e74.jpeg">
+				<div  class="enclouserdiv">
+					<p>Project Title</p>
+					<p>Graphic Design</p>
+					<div>
+						<img src="assets/link.png">
+						<img src="assets/search.png">
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="menu clearfix">
-			<h2>Our Stories</h2>
+			<h2><span class="h2_orange">Our</span> Stories</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mauris urna, euismod sit amet pharetra nec, consectetur sed est. Sed sollicitudin nisi faucibus, blandit dolor et, sodales erat. Fusce pulvinar mollis arcu.</p>
 			<div class="menu_items">
 				<figure>
@@ -155,77 +261,200 @@
 				</figure>
 			</div>
 		</div>
-		<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.4250554480577!2d-79.38791724968819!3d43.63932416124474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3529f5ec325b%3A0x2c9db8eb0e9f9613!2s260+Queens+Quay+W%2C+Toronto%2C+ON+M5J+2N3!5e0!3m2!1sen!2sca!4v1527547627974" width="100%" height="10%" frameborder="0" style="border:0" allowfullscreen></iframe>
-		<div>
-			<h2>Our Breakfast</h2>
-			<ul>
-				<li>
-					<a href="">
-						<h4>Soft-Boiled Organic Egg</h4>
-						<p>with "soldiers"........5.00</p>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<h4>Egg Any Style</h4>
-						<p>with homefries & toast........16.00</p>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<h4>Scrambled Eggs in Puff Pastry </h4>
-						<p>with wild mushrooms and asparagus......22</p>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<h4></h4>
-						<p></p>
-					</a>
-				</li>
-				<li>	
-					<a href="">
-						<h4></h4>
-						<p></p>
-					</a>
-				</li>
-				<li>	
-					<a href="">
-						<h4></h4>
-						<p></p>
-					</a>
-				</li>
-				<li>	
-					<a href="">
-						<h4></h4>
-						<p></p>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<h4></h4>
-						<p></p>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<h4></h4>
-						<p></p>
-					</a>
-				</li>
-				<li>	
-					<a href="">
-						<h4></h4>
-						<p></p>
-					</a>
-				</li>
-			</ul>
-		</div>
-		<div></div>
+		<div class="breakfast_menu">
+			<h2><span class="h2_orange">Our</span> Breakfast</h2>
+			<div class="breakfast_menu_parts">
+				<ul class="breakfast_menu_part">
+					<li >
+						<a href="">
+							<h4>Soft-Boiled Organic Egg</h4>
+							<div class="breakfast_menu_item">
+								<p>with "soldiers"</p>
+								<p class="dots"></p>
+								<p>5.00</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<h4>Egg Any Style</h4>
+							<div class="breakfast_menu_item">
+								<p>with homefries & toast</p>
+								<p class="dots"></p>
+								<p>16.00</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<h4>Scrambled Eggs in Puff Pastry </h4>
+							<div class="breakfast_menu_item">
+								<p>with wild mushrooms and asparagus</p>
+								<p class="dots"></p>
+								<p>22.00</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<h4>Eggs Benedict</h4>
+							<div class="breakfast_menu_item">
+								<p>with homefries</p>
+								<p class="dots"></p>
+								<p>22.00</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>	
+						<a href="">
+							<h4>Eggs Norwegian</h4>
+							<div class="breakfast_menu_item">
+								<p>poached eggs with smoked salmon and hollandaise</p>
+								<p class="dots"></p>
+								<p>23.00</p>
+							</div>
+							
+						</a>
+					</li>
+				</ul>
+				<ul class="breakfast_menu_part">
+					<li>
+						<a href="">
+							<h4>Soft-Boiled Organic Egg</h4>
+							<div class="breakfast_menu_item">
+								<p>with "soldiers"</p>
+								<p class="dots"></p>
+								<p>5.00</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<h4>Egg Any Style</h4>
+							<div class="breakfast_menu_item">
+								<p>with homefries & toast</p>
+								<p class="dots"></p>
+								<p>16.00</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<h4>Scrambled Eggs in Puff Pastry </h4>
+							<div class="breakfast_menu_item">
+								<p>with wild mushrooms and asparagus</p>
+								<p class="dots"></p>
+								<p>22.00</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<h4>Eggs Benedict</h4>
+							<div class="breakfast_menu_item">
+								<p>with homefries</p>
+								<p class="dots"></p>
+								<p>22.00</p>
+							</div>
+							
+						</a>
+					</li>
+					<li>	
+						<a href="">
+							<h4>Eggs Norwegian</h4>
+							<div class="breakfast_menu_item">
+								<p>poached eggs with smoked salmon and hollandaise</p>
+								<p class="dots"></p>
+								<p>23.00</p>
+							</div>
+							
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="details">
+				<button class="details-button" type=""><span>👁</span> View Details</button>
+			</div>
+	</div>
 	</main>
 
 	<footer>	
-
+		<div class="footer_display">
+			<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.4250554480577!2d-79.38791724968819!3d43.63932416124474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3529f5ec325b%3A0x2c9db8eb0e9f9613!2s260+Queens+Quay+W%2C+Toronto%2C+ON+M5J+2N3!5e0!3m2!1sen!2sca!4v1527547627974" width="100%" height="60%" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<!-- <div class="contact_us_box">
+				<h2><span class="h2_orange">Contact</span> Us</h2>
+				<label for="Name*"></label>
+				<input type="name"  name="name" id="name" placeholder="Name*" <i class="fas fa-user-alt"></i>>
+				<label for="Email*"></label>
+				<input type="Email"  name="Email" id="Email" placeholder="Email*" <img src="assets/mail.png" alt="">>
+				<label for="Message"></label>
+				<input type="message"  name="message" id="message" placeholder="message" >
+				<button type="">Send Message</button>
+				
+			</div> -->
+			<form class="contact_us" id="contact" action="http://www.focuspocus.io/magic/a83bf3bda3192462d2126f1e9a61afff" method="POST" accept-charset="utf-8">
+				<h2><span class="h2_orange">Contact</span> Us</h2>
+				<input class= "name" type="textedit" name="name" id="name" placeholder="Name" required>
+				<input class= "mail" type="email" name="email" id="email" placeholder="Email Address" required>
+				<textarea class="message" form="contact" placeholder="Message"></textarea>
+				<input class="submit" type="submit" name="submit" value="Send Message">
+			</form>
+		</div>
+		<div>
+			<div class="footer_footer">
+				<div class="footer_image">
+					<div class="footer-side-bar">
+						<div class="logo">
+							<img src="assets/logo2.png">
+						</div>
+						<div class="side_footer">
+							<div class="socialLinks">
+								<i class="fab fa-facebook-f"></i>
+								<i class="fab fa-twitter"></i>
+								<i class="fab fa-skype"></i>
+								<i class="fab fa-google-plus-g"></i>
+								<i class="fab fa-linkedin-in"></i>
+								<i class="fab fa-instagram"></i>
+							</div>
+						</div>
+					</div>
+<!-- 					<div class="footer-separator">
+					</div>
+ -->					<div class="footer-side-bar-right">
+						<div>
+							<img src="assets/locationicon.png">
+							<div>
+								<p>The Gourmet</p>
+								<p>PO Box 21177 </p>
+								<p>Little Lonsdale St. Melbourne</p>
+								<p>Victoria 8011 Australia</p>
+							</div>
+						</div>
+						<div>
+							<img src="assets/mobile.png">
+							<div>
+								<p>Phone:(415) 124-5678</p>
+								<p>Fax:(415) 124-5678</p>									
+							</div>
+						</div>
+						<div>
+							<img src="assets/mail.png">
+							<div>
+								<p>support@yourname.com</p>									
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-copyright">
+					<p>© 2014 The Gourmet. All Rights reserved</p>
+				</div>
+			</div>
+		</div>
 	</footer>
 
 	
