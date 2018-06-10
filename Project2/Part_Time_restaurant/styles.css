@@ -5,10 +5,9 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 * { box-sizing: border-box; }
 
-a {
-	text-decoration: none;
-	color: white;
-}
+
+/*HEADER MAIN IMAGE*/
+
 
 header {
 	background-image: url(assets/Images/background2.jpeg);
@@ -19,26 +18,6 @@ header {
 	padding: 0;
 	position: relative;
 }
-
-/*h4 {
-	margin: 0;
-	padding: 0;
-}*/
-
-/*.images {
-	display: flex;
-	justify-content: center;
-}*/
-
-/*.images {
-	display: inline-block;
-	text-align: center;
-	position: absolute;
-	top: 60%;
-	left: 60%;
-	transform: translate(-50%, -50%);
-	
-}*/
 
 .eye {
 	position: absolute;
@@ -54,7 +33,6 @@ header {
 	border: none;
     color: white;
     text-align: center;
-    /*padding: 15px 32px;*/
     text-align: center;
     font-size: 14px;
     padding: 15px;
@@ -65,49 +43,17 @@ header {
 .eye img {
 	height: 14px;
 	width: 14px;
-	/*padding: -10px;*/
-}
-
-/*.details button {
-	background-color: #CE5111;
-	border: none;
-    color: white;
-    font-size: 14px;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-}*/
-
-.details {
-	text-align: center;
-}
-
-.details span {
-	font-size: 25px;
-}
-
-.details-button {
-	width: 150px;
-	height: 50px;
-	background-color: #CE5111;
-	color: white;
-	border: none;
-	margin-bottom: 2%;
 }
 
 .genuine {	
 	position: absolute;
 	top: 40%;
 	left: 50%;
-	/*height: 22px;*/
-	/*width: 22px;*/
 	transform: translate(-50%, -100%);
 }
 
 .foodpassion {
 	position: absolute;
-	/*height: 472px;*/
-	/*width: 472px;*/
 	top: 55%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -115,12 +61,14 @@ header {
 
 .cooking {
 	position: absolute;
-	/*height: 66px;*/
-	/*width: 66px;*/
 	top: 70%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
+
+/*SIDE HEADER*/
+
 
 .side-bar {	
 	top: 0;
@@ -183,28 +131,6 @@ header {
 	color: #8998A5;
 }
 
-/*img {
-	color: white;
-}
-
-li a {
-	text-decoration: none;
-}*/
-
-.socialLinks {
-	width: 100px;
-	margin: auto;
-	text-align: center;
-	display: flex;
-	justify-content: space-around;
-	color: #8998A5;
-}
-
-.socialLinks i:hover {
-	font-weight: bolder;
-
-}
-
 .general {
 	text-align: center;
 	padding: 40px 0 40px 0;
@@ -228,15 +154,6 @@ li a {
 .general .orange {
 	color: #CE5111;
 	font-size: 12px;
-}
-
-.orange {
-	font-size: 12px;
-	text-align: center;
-}
-
-.orange:nth-word(1) {
-	font-color: #CE5111;
 }
 
 .general .gray {
@@ -267,6 +184,101 @@ li a {
 	font-size: 12px;
 }
 
+.socialLinks {
+	width: 100px;
+	margin: auto;
+	text-align: center;
+	display: flex;
+	justify-content: space-around;
+	color: #8998A5;
+}
+
+.socialLinks i:hover {
+	font-weight: bolder;
+}
+
+
+/*HEADER ENDS*/
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+
+/*h4 {
+	margin: 0;
+	padding: 0;
+}*/
+
+/*.images {
+	display: flex;
+	justify-content: center;
+}*/
+
+/*.images {
+	display: inline-block;
+	text-align: center;
+	position: absolute;
+	top: 60%;
+	left: 60%;
+	transform: translate(-50%, -50%);
+	
+}*/
+/*.details button {
+	background-color: #CE5111;
+	border: none;
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+}*/
+
+.details {
+	text-align: center;
+}
+
+.details span {
+	font-size: 25px;
+}
+
+.details-button {
+	width: 150px;
+	height: 50px;
+	background-color: #CE5111;
+	color: white;
+	border: none;
+	margin-bottom: 2%;
+}
+
+
+
+
+
+/*img {
+	color: white;
+}
+
+li a {
+	text-decoration: none;
+}*/
+
+
+
+
+
+/*.orange {
+	font-size: 12px;
+	text-align: center;
+}
+
+.orange:nth-word(1) {
+	font-color: #CE5111;
+}*/
+
+
+/*MAIN*/
 
 /*BODY */
 
@@ -274,6 +286,10 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
+
+/*ABOUT CHEF*/
+
 
 .chefIntro {
 	float: left;
@@ -295,19 +311,10 @@ body {
 	display: flex;
 }
 
-.breakfast_menu h2 {
-	color: white;
-}
-
-.h2_orange {
-	color: #CE5111;
-}
-
 .image1 img {
 	width: 100px;
 	height: 100px;
 	filter: grayscale(100%);
-	/*float: left;*/
 }
 
 .image1wrapper {
@@ -352,14 +359,36 @@ strong {
 	color: black;
 }
 
+.image2 p {
+	padding: 0;
+	margin-top: 0;
+}
+
+.chefPic {
+	flex: 1;
+	float: left;
+}
+
+.chefPic img {
+	width: 100%;
+}
+
+
+/*img:nth-of-type(5n){
+	margin-right: 0;
+}*/
+
 .para p {
 	margin: 0;
 	color: #8998A5;
 	padding: 20px 0 20px 0;
 }
 
+
+/*OUR GALLERY*/
+
+
 .gallery {
-	/*text-align: center;*/
 	background-color: #24292D;
 	padding: 4%;
 	margin: 0;
@@ -371,39 +400,8 @@ strong {
 
 .gallery h2 {
 	margin: 2% 20% 2% 20%; 
-	/*text-align: center;*/
 }
 
-.image2 p {
-	padding: 0;
-	margin-top: 0;
-}
-.image2{
-	/*float: left;*/
-}
-.chefPic {
-	flex: 1;
-	float: left;
-	/* max-width: 100%; 
-    height: auto; */
-}
-
-.chefPic img {
-	width: 100%;
-}
-
-.menuImages{
-	width: 100%;
-}
-.menuImages img{
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: 100%;
-}
-/*img:nth-of-type(5n){
-	margin-right: 0;
-}*/
 
 .gallery p {
 	text-align: center;
@@ -426,6 +424,17 @@ strong {
 
 .gallery ul li a:hover {
 	color: orange;
+}
+
+.menuImages {
+	width: 100%;
+}
+
+.menuImages img {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .menu {
@@ -466,6 +475,14 @@ strong {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+}
+
+.h2_orange {
+	color: #CE5111;
+}
+
+.breakfast_menu h2 {
+	color: white;
 }
 
 .breakfast_menu1 li{
@@ -755,6 +772,9 @@ footer {
 	position: absolute;
 	left: 0;
 	bottom: 0;
+	padding: 0;
+	margin: 0;
+
 }
 
 .enclouserdiv div img {
