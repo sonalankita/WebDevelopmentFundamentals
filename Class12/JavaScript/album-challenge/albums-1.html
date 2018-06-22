@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Glow Animation</title>
+
+</head>
+<body>
+  <h1>You have selected <span class="num">0</span> albums</h1>
+  <div class="albums">
+    <img src="images/album1.jpg">
+    <img src="images/album2.jpg">
+    <img class="playing" src="images/album3.jpeg">
+    <img src="images/album4.jpg">
+    <img src="images/album5.jpg">
+    <img src="images/album6.jpg">
+    <img src="images/album7.jpg">
+    <img src="images/album8.jpg">
+    <img src="images/album9.jpg">
+    <img src="images/album10.jpg">
+    <img src="images/album11.jpg">
+    <img src="images/album12.jpg">
+    <img src="images/album13.jpg">
+  </div>
+
+  <style>
+    body {
+      text-align: center;
+      background:#EBEBEB;
+      font-family: sans-serif;
+    }
+    .albums img {
+      margin:10px;
+      padding:5px;
+      border:1px solid #ccc;
+      border-radius:3px;
+      background:white;
+      cursor:pointer; /*gives it a hand on hover */
+      -webkit-transition:all 0.4s;
+      width:200px;
+    }
+    .albums img.selected {
+      background:#797979;
+    }
+
+    .albums img.playing {
+      -webkit-animation:pulse 0.25s infinite alternate;
+    }
+
+    @-webkit-keyframes pulse {
+      0% {
+        box-shadow:0 0 10px red;
+      }
+      100% {
+        box-shadow:0 0 20px red;
+      }
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    
+  <script>
+
+
+    // 1. Include a jQuery document ready , to make sure everything is loaded before i start writing jQuery
+    // 2. double click of an album add the class of playing to that image and remove the class of playing from the curret playing image
+    // 3. on the click of an album image toggle the class of selected
+    // 4. based on the number of album selected update the counter in the span with a class of nunber  
+
+
+    $(function(){
+
+
+      // alert('the doc is ready');             this is how to make document ready
+      // console.log('the doc is ready');       this is how to make document ready
+      // console.log( $('.albums img'));
+
+
+      $('.albums img').on ('dblclick', function(){
+          console.log('double clicking');      // check if it is working
+          $('.albums .playing') .removeClass('playing');
+          $(this).addClass('playing');
+      }) ;
+
+      $('.albums img').on ('click', function(){
+          console.log('Single clicking');
+          $(this) .toggleClass('selected');
+          // update counter code goes here
+
+          // console.log($('.albums .selected').length);
+
+      $('.num').text($('.albums .selected').length);
+
+   
+      
+      });
+
+
+    });
+
+  </script>
+
+</body>
+</html>

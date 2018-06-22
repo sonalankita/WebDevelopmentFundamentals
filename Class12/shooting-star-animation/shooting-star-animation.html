@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shooting Star Animation</title>
+</head>
+<body>
+  <span class="shootingStar">&#9732;</span>
+
+  <style>
+    body {
+      background:black;
+    }
+
+    .shootingStar {
+      /* Set up the normal state */
+      color:yellow;
+      font-size:50px;
+      font-weight: bold;
+      position: absolute;
+      -webkit-transform:rotate(192deg);
+      animation: shoot 3s linear infinite;
+      /*animation: disco 5s ease infinite;*/
+      /* apply the animation */
+    }
+
+    @-webkit-keyframes shoot {
+      0% {
+        bottom: 0;
+        right: 100%;
+      }
+
+      
+
+      100% {
+        bottom: 100%;
+        right: 0;
+
+      }
+
+    
+    }
+  </style>
+</body>
+</html>

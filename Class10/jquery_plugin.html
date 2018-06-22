@@ -8,13 +8,19 @@
 <body>
 	<div class="main-carousel">
 	  	<div class="carousel-cell">
-	  		<img src="http://fillmurray.com/600/600">
+	  		<div class="cell">
+		  		<img src="http://fillmurray.com/600/600">
+		  	</div>
 	  	</div>
-	  	<div class="carousel-cell">
-	  		<img src="http://fillmurray.com/600/600">
+	  	<div class="carousel-cell cell">
+	  		<div class="cell">
+		  		<img src="http://fillmurray.com/600/600">
+		  	</div>
 	  	</div>
-	  	<div class="carousel-cell">
-	  		<img src="http://fillmurray.com/600/600">
+	  	<div class="carousel-cell cell">
+	  		<div class="cell">
+		  		<img src="http://fillmurray.com/600/600">
+		  	</div>
 	  	</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -22,7 +28,7 @@
 	<script>
 		$(function(){
 			$('.main-carousel').flickity({
-				wrapAround: true;
+				wrapAround: true,
 				prevNextButtons: false,
 			});
 	 })

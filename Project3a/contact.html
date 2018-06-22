@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cake Factory</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<header>	
+	<div class="titlebar">
+		<form action="products.html" method="get">
+	        <input name="query" class="searchbox" placeholder="Search here..." value="" autocomplete="off" type="text">
+	        <input class="button" value="" name="Search" title="Search" type="submit">
+	    </form>
+	    <span class="grow"></span>
+	    <a class="login" href="login.html">Login</a>
+		<a class="register" href="register.html">Create Account</a>
+		<a class="cart" href="cart.html">Cart</a>
+	</div>
+    <div class="banner">
+      <div class="logo">
+          <img src="assets/logo.png">
+      </div>
+      <nav>
+		<ul>
+		     <li>
+		      <a href="index.html#featured">Featured</a>
+		    </li>
+		    <li>
+		      <a href="products.html">Shop</a>
+		    </li>
+		    <li>
+		    	<a href="blog.html">Blog</a>
+		    </li>
+			<li>
+		      <a href="about.html">About</a>
+		    </li>
+		    <li>
+		      <a href="contact.html">Contact</a>
+		    </li>
+		</ul>
+      </nav>
+    </div>
+</header>
+<main>
+	<h2>Contact</h2>
+	<h4>Use the form below to contact us with any questions or comments you may have.</h4>
+	<label for="first_name">First Name</label>
+	<input type="text" name="name" id="name" placeholder="Name" required >
+	<label for="email">EMail</label>
+	<input type="email" name="email" id="email" placeholder="email">
+	<label for="phone">Phone Number</label>
+	<input type="tel" id="phone" name="phone_number" value="416-" >
+	<textarea class="message" form="contact" placeholder="Message"></textarea>
+	<input class="submit" type="submit" name="submit" value="Send Message">
+
+
+</main>
+<footer>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

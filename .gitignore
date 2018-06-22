@@ -1,3 +1,4 @@
+*.exe
 */**/__MACOSX/*
 *.zip
 */**/.DS_Store

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cake Factory</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<header>	
+	<div class="titlebar">
+		<form action="products.html" method="get">
+	        <input name="query" class="searchbox" placeholder="Search here..." value="" autocomplete="off" type="text">
+	        <input class="button" value="" name="Search" title="Search" type="submit">
+	    </form>
+	    <span class="grow"></span>
+	    <a class="login" href="login.html">Login</a>
+		<a class="register" href="register.html">Create Account</a>
+		<a class="cart" href="cart.html">Cart</a>
+	</div>
+    <div class="banner">
+      <div class="logo">
+          <img src="assets/logo.png">
+      </div>
+      <nav>
+		<ul>
+		     <li>
+		      <a href="index.html#featured">Featured</a>
+		    </li>
+		    <li>
+		      <a href="products.html">Shop</a>
+		    </li>
+		    <li>
+		    	<a href="blog.html">Blog</a>
+		    </li>
+			<li>
+		      <a href="about.html">About</a>
+		    </li>
+		    <li>
+		      <a href="contact.html">Contact</a>
+		    </li>
+		</ul>
+      </nav>
+    </div>
+</header>
+<main>
+		<h2>About Cake Factory</h2>
+		<h4>Our Story</h4>
+		<div class="story">
+			<p>Integer in libero elit. Cras volutpat at tellus eget consectetur. Integer consectetur malesuada dolor, ac venenatis risus aliquam in. Maecenas sodales et sapien quis volutpat. Mauris sit amet mauris in mi elementum rutrum id in metus. Ut eu erat sit amet nibh tincidunt porttitor lacinia quis ante. Aliquam erat volutpat. Integer eu neque vel urna lacinia venenatis eu quis felis. Nullam rutrum diam sit amet nibh malesuada mattis. In a lorem id nisi lobortis rhoncus non et lectus.</p>
+			<img src="assets/photo-people.jpeg" alt="">
+		</div>
+	<div class="story2">
+		<img src="assets/images.jpeg" alt="">
+		<p>Proin eu lacus venenatis, tristique mi sit amet, consequat arcu. Aenean id lorem bibendum, fringilla felis nec, blandit urna. Pellentesque sed est in tellus vestibulum elementum quis eu diam. </p>
+	</div>
+	<div>
+		<p>Phasellus luctus justo mi, vel posuere leo egestas a. Praesent non tortor placerat, luctus sapien quis, hendrerit enim. Ut blandit, purus quis efficitur fringilla, ipsum odio elementum urna, et condimentum magna nulla ac ex. </p>
+		<p>Mauris ac aliquet ante. Vestibulum iaculis est in dui facilisis interdum. Sed a tincidunt ipsum, sit amet pharetra sapien. Donec blandit lacus a quam fringilla consectetur.</p>
+		<p>Suspendisse potenti. Quisque feugiat pretium aliquam. Vestibulum at pellentesque orci. Cras quis turpis et magna feugiat sodales. Nunc vel elementum neque. Maecenas placerat mi elit, a accumsan nulla suscipit a. </p>
+	</div>
+	<h4>About the shopkeeper</h4>
+	<p> Vestibulum laoreet sapien ac aliquam luctus. Cras sollicitudin lacinia risus, vitae vulputate dui fringilla eu. Donec dui quam, elementum vel elit iaculis, sodales sagittis velit. Quisque facilisis enim in lacus porttitor dictum. Sed nisl lacus, efficitur ac nibh ut, molestie feugiat enim. Nam consectetur mi vitae enim pulvinar vulputate.</p>
+
+	<div class="shopkeeper">
+		<figure>
+			<img src="assets/family1.jpeg" alt="">
+			<figcaption>Cras sollicitudin lacinia risus, vitae vulputate dui fringilla eu. Donec dui quam, elementum vel elit iaculis</figcaption>
+		</figure>
+				<figure>
+			<img src="assets/family2.jpeg" alt="">
+			<figcaption>Cras sollicitudin lacinia risus, vitae vulputate dui fringilla eu. Donec dui quam, elementum vel elit iaculis</figcaption>
+		</figure>
+				<figure>
+			<img src="assets/family3.jpeg" alt="">
+			<figcaption>Cras sollicitudin lacinia risus, vitae vulputate dui fringilla eu. Donec dui quam, elementum vel elit iaculis</figcaption>
+		</figure>
+				<figure>
+			<img src="assets/family4.jpeg" alt="">
+			<figcaption>Cras sollicitudin lacinia risus, vitae vulputate dui fringilla eu. Donec dui quam, elementum vel elit iaculis</figcaption>
+		</figure>
+	</div>
+</main>
+<footer>
+</footer>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("slide");
+  if (x.length > 0) {
+	  if (n > x.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = x.length}
+	  for (i = 0; i < x.length; i++) {
+	     x[i].style.display = "none";  
+	  }
+	  x[slideIndex-1].style.display = "block";  
+	}
+}
+</script>
+</body>
+</html>
